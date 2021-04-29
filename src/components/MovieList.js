@@ -3,6 +3,7 @@ import Spinner from './misc/Spinner';
 import classes from '../styles/MovieList.module.css';
 
 const MovieList = (props) => {
+  const NominateButtonComponent = props.nominateComponent;
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -20,27 +21,28 @@ const MovieList = (props) => {
 
         <br />
 
+        {/* <div>
+          {!props.movies && !isLoading ? <div>Movie not found</div> : null}
+        </div> */}
+
         {props.movies.map((movie, index) => (
           <div key={index}>
             <div className={classes.MovieDiv}>
               <div className={classes.MovieCard}>
-                <div>
-                  <img
+                <p>{movie.Title}</p>
+                <p>{movie.Year}</p>
+                {/* <img
                     className={classes.MovieImage}
                     src={movie.Poster}
                     alt=''
-                  />
+                  /> */}
+                {/* <button className={classes.NominateButton}>Nominate</button> */}
+                <div onClick={() => props.handleNominate(movie)}>
+                  <NominateButtonComponent />
                 </div>
-                <div>
-                  <p className={classes.Artist}>
-                    <strong>{movie.Title}</strong>
-                  </p>
-
-                  {/* if there's no data and it's not loading, show a message */}
-                  {!props.movies && !isLoading ? (
-                    <div>Movie not found</div>
-                  ) : null}
-                </div>
+                {/* <div>
+                  {!movie && !isLoading ? <div>Movie not found</div> : null}
+                </div> */}
               </div>
             </div>
           </div>

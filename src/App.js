@@ -3,11 +3,13 @@ import MovieList from './components/MovieList';
 import MainHeading from './components/MainHeading';
 import Input from './components/Input';
 import NominatedMovies from './components/NominatedMovies';
+import NominateButtonComponent from './components/NominateButtonComponent';
 import classes from './styles/App.module.css';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchItem, setSearchItem] = useState('');
+  const [nominate, setNominate] = useState([]);
 
   useEffect(() => {
     fetchMovies(searchItem);
@@ -25,15 +27,32 @@ const App = () => {
     }
   };
 
+  const nominateMovie = (movie) => {
+    const nominatedMovieList = [...nominate, movie];
+    setNominate(nominatedMovieList);
+    console.log('Nominated');
+  };
+
   return (
     <div className={classes.Parent}>
       <div className={classes.Child1}>
         <MainHeading heading='Movies' />
         <Input searchItem={searchItem} setSearchItem={setSearchItem} />
-        <MovieList movies={movies} searchItem={searchItem} />
+        <MovieList
+          movies={movies}
+          searchItem={searchItem}
+          handleNominate={nominateMovie}
+          nominateComponent={NominateButtonComponent}
+        />
       </div>
       <div className={classes.Child2}>
-        <NominatedMovies />
+        <MainHeading heading='Nominated Movies' />
+        {/* <NominatedMovies movies={nominate} /> */}
+        <NominatedMovies
+          movies={nominate}
+          handleNominate={nominateMovie}
+          nominateComponent={NominateButtonComponent}
+        />
       </div>
     </div>
   );
