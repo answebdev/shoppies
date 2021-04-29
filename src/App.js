@@ -16,6 +16,10 @@ const App = () => {
     fetchMovies(searchItem);
   }, [searchItem]);
 
+  const saveLocalStorage = (items) => {
+    localStorage.setItem('shoppies-movies', JSON.stringify(items));
+  };
+
   const fetchMovies = async () => {
     const url = `http://www.omdbapi.com/?s=${searchItem}&apikey=1ec7b4c0`;
 
@@ -32,6 +36,7 @@ const App = () => {
     const nominatedMovieList = [...nominate, movie];
     setNominate(nominatedMovieList);
     // console.log('Nominated');
+    saveLocalStorage(nominatedMovieList);
   };
 
   const removeNominatedMovie = (movie) => {
