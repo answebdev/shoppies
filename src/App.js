@@ -16,6 +16,11 @@ const App = () => {
     fetchMovies(searchItem);
   }, [searchItem]);
 
+  useEffect(() => {
+    const moviesNominated = JSON.parse(localStorage.getItem('shoppies-movies'));
+    setNominate(moviesNominated);
+  }, []);
+
   const saveLocalStorage = (items) => {
     localStorage.setItem('shoppies-movies', JSON.stringify(items));
   };
@@ -45,6 +50,7 @@ const App = () => {
     );
     // console.log('Remove');
     setNominate(nominatedMovieList);
+    saveLocalStorage(nominatedMovieList);
   };
 
   return (
