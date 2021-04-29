@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import MovieList from './components/MovieList';
+import MainHeading from './components/MainHeading';
+import Input from './components/Input';
 import './App.css';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     fetchMovies();
@@ -21,7 +24,13 @@ const App = () => {
 
   return (
     <div>
-      <MovieList movies={movies} />
+      <div>
+        <MainHeading heading='Movies' />
+        <Input />
+      </div>
+      <div>
+        <MovieList movies={movies} />
+      </div>
     </div>
   );
 };
