@@ -6,27 +6,29 @@ import './App.css';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
-  const [search, setSearch] = useState('');
+  const [searchItem, setSearchItem] = useState('');
 
   useEffect(() => {
-    fetchMovies();
-  }, []);
+    fetchMovies(searchItem);
+  }, [searchItem]);
 
   const fetchMovies = async () => {
-    const url = 'http://www.omdbapi.com/?s=avengers&apikey=1ec7b4c0';
+    const url = `http://www.omdbapi.com/?s=${searchItem}&apikey=1ec7b4c0`;
 
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log(data);
-    setMovies(data.Search);
+    if (data.Search) {
+      // console.log(data);
+      setMovies(data.Search);
+    }
   };
 
   return (
     <div>
       <div>
         <MainHeading heading='Movies' />
-        <Input />
+        <Input searchItem={searchItem} setSearchItem={setSearchItem} />
       </div>
       <div>
         <MovieList movies={movies} />
