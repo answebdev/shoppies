@@ -4,7 +4,7 @@
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
-  align-content: stretch;
+  /* align-content: stretch; */
 }
 
 .Child2 {

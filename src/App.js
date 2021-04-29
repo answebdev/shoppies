@@ -30,7 +30,7 @@ const App = () => {
       <div className={classes.Child1}>
         <MainHeading heading='Movies' />
         <Input searchItem={searchItem} setSearchItem={setSearchItem} />
-        <MovieList movies={movies} />
+        <MovieList movies={movies} searchItem={searchItem} />
       </div>
       <div className={classes.Child2}>
         <NominatedMovies />
