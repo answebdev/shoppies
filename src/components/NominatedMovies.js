@@ -1,4 +1,5 @@
 import React from 'react';
+import RemoveNominatedMovie from './RemoveNominatedMovie';
 import classes from '../styles/NominatedMovies.module.css';
 
 const NominatedMovies = (props) => {
@@ -13,11 +14,10 @@ const NominatedMovies = (props) => {
               <p>{movie.Title}</p>
               <p>{movie.Year}</p>
               <img style={{ height: '100px' }} src={movie.Poster} alt='' />
-              {/* <button className={classes.NominateButton}>Nominate</button> */}
-
-              {/* <div>
-                  {!movie && !isLoading ? <div>Movie not found</div> : null}
-                </div> */}
+            </div>
+            {/* <button>Remove</button> */}
+            <div onClick={() => props.handleRemove(movie)}>
+              <RemoveNominatedMovie />
             </div>
           </div>
         </div>

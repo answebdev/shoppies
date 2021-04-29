@@ -4,6 +4,7 @@ import MainHeading from './components/MainHeading';
 import Input from './components/Input';
 import NominatedMovies from './components/NominatedMovies';
 import NominateButtonComponent from './components/NominateButtonComponent';
+import RemoveNominatedMovie from './components/RemoveNominatedMovie';
 import classes from './styles/App.module.css';
 
 const App = () => {
@@ -30,7 +31,15 @@ const App = () => {
   const nominateMovie = (movie) => {
     const nominatedMovieList = [...nominate, movie];
     setNominate(nominatedMovieList);
-    console.log('Nominated');
+    // console.log('Nominated');
+  };
+
+  const removeNominatedMovie = (movie) => {
+    const nominatedMovieList = nominate.filter(
+      (nominatedMovie) => nominatedMovie.imdbID !== movie.imdbID
+    );
+    // console.log('Remove');
+    setNominate(nominatedMovieList);
   };
 
   return (
@@ -52,6 +61,8 @@ const App = () => {
           movies={nominate}
           handleNominate={nominateMovie}
           nominateComponent={NominateButtonComponent}
+          removeComponent={RemoveNominatedMovie}
+          handleRemove={removeNominatedMovie}
         />
       </div>
     </div>
