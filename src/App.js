@@ -11,6 +11,7 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchItem, setSearchItem] = useState('');
   const [nominate, setNominate] = useState([]);
+  //const APIKEY = process.env.REACT_APP_MOVIE_API_KEY;
 
   useEffect(() => {
     fetchMovies(searchItem);
@@ -26,7 +27,8 @@ const App = () => {
   };
 
   const fetchMovies = async () => {
-    const url = `http://www.omdbapi.com/?s=${searchItem}&apikey=1ec7b4c0`;
+    const url = `https://www.omdbapi.com/?s=${searchItem}&apikey=1ec7b4c0`;
+    // const url = `https://www.omdbapi.com/?s=${searchItem}&apikey=${APIKEY}`;
 
     const response = await fetch(url);
     const data = await response.json();
