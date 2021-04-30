@@ -16,10 +16,11 @@ const NominatedMovies = (props) => {
               <p>{movie.Genre}</p>
               <img style={{ height: '100px' }} src={movie.Poster} alt='' />
               <a
-                href={`https://www.imdb.com/title/${movie.imdbID.replace(
-                  /['"]+/g,
-                  ''
-                )}`}
+                href={`https://www.imdb.com/title/${movie.imdbID}`}
+                // href={`https://www.imdb.com/title/${movie.imdbID.replace(
+                //   /['"]+/g,
+                //   ''
+                // )}`}
                 target='_blank'
                 rel='noreferrer noopener'
               >

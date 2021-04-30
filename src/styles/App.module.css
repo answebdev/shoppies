@@ -7,6 +7,7 @@
   /* align-content: stretch; */
 }
 
+.Child1,
 .Child2 {
   align-self: flex-start;
 }
