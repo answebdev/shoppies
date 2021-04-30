@@ -1,0 +1,22 @@
+.RemoveBtn {
+  letter-spacing: 1px;
+  background-color: #008060;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 0.25rem;
+  border: 1px solid #008060;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.RemoveBtn:hover {
+  background-color: #004d3a;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.RemoveBtn:active {
+  background-color: #008060;
+  color: #ffffff;
+  border: 1px solid #008060;
+}

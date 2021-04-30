@@ -4,11 +4,12 @@
 }
 
 .MovieCard {
-  /* display: flex; */
-
-  font-size: 1.1rem;
-  width: 400px;
-  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  line-height: 1.2em;
+  background-color: #ffffff;
+  width: 50%;
   padding: 2em;
   border-radius: 2px;
   -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
@@ -16,8 +17,12 @@
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.NominateButton {
-  float: right;
+.NomBtn {
+  /* float: right; */
+  align-self: center;
+  justify-self: right;
+  /* box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
+  background-color: #004c3f; */
 }
 
 .MovieImage {

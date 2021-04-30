@@ -9,13 +9,6 @@ const MovieList = (props) => {
 
   return (
     <div className={classes.MovieDiv}>
-      {/* <div className={classes.MovieCard}>
-        {props.movies.map((movie, index) => (
-          <div key={index}>
-            <img className={classes.MovieImage} src={movie.Poster} alt='' />
-          </div>
-        ))}
-      </div> */}
       <div>
         <h3>Movie results for: {props.searchItem}</h3>
 
@@ -31,15 +24,13 @@ const MovieList = (props) => {
               <div className={classes.MovieCard}>
                 <p>{movie.Title}</p>
                 <p>{movie.Year}</p>
-                {/* <img
-                    className={classes.MovieImage}
-                    src={movie.Poster}
-                    alt=''
-                  /> */}
-                {/* <button className={classes.NominateButton}>Nominate</button> */}
-                <div onClick={() => props.handleNominate(movie)}>
-                  <NominateButtonComponent />
+                <div
+                  className={classes.NomBtn}
+                  onClick={() => props.handleNominate(movie)}
+                >
+                  <NominateButtonComponent isNominated={props.isNominated} />
                 </div>
+
                 {/* <div>
                   {!movie && !isLoading ? <div>Movie not found</div> : null}
                 </div> */}

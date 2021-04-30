@@ -11,6 +11,7 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchItem, setSearchItem] = useState('');
   const [nominate, setNominate] = useState([]);
+  const [isNominated, setIsNominated] = useState('');
 
   //const APIKEY = process.env.REACT_APP_MOVIE_API_KEY;
 
@@ -45,7 +46,9 @@ const App = () => {
   const nominateMovie = (movie) => {
     const nominatedMovieList = [...nominate, movie];
     setNominate(nominatedMovieList);
-    // console.log('Nominated');
+    setIsNominated(true);
+    // Specific movie nominated:
+    console.log(movie);
     saveLocalStorage(nominatedMovieList);
   };
 
@@ -55,6 +58,7 @@ const App = () => {
     );
     // console.log('Remove');
     setNominate(nominatedMovieList);
+    setIsNominated(false);
     saveLocalStorage(nominatedMovieList);
   };
 
@@ -68,6 +72,8 @@ const App = () => {
           searchItem={searchItem}
           handleNominate={nominateMovie}
           nominateComponent={NominateButtonComponent}
+          isNominated={isNominated}
+          setIsNominated={setIsNominated}
         />
       </div>
       <div className={classes.Child2}>
