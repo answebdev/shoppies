@@ -19,7 +19,11 @@ const App = () => {
 
   useEffect(() => {
     const moviesNominated = JSON.parse(localStorage.getItem('shoppies-movies'));
-    setNominate(moviesNominated);
+    // setNominate(moviesNominated);
+
+    if (moviesNominated) {
+      setNominate(moviesNominated);
+    }
   }, []);
 
   const saveLocalStorage = (items) => {
@@ -69,7 +73,6 @@ const App = () => {
       </div>
       <div className={classes.Child2}>
         <MainHeading heading='Nominated Movies' />
-        {/* <NominatedMovies movies={nominate} /> */}
         <NominatedMovies
           movies={nominate}
           handleNominate={nominateMovie}
