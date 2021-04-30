@@ -26,7 +26,7 @@ const App = () => {
     localStorage.setItem('shoppies-movies', JSON.stringify(items));
   };
 
-  const fetchMovies = async () => {
+  const fetchMovies = async (searchItem) => {
     const url = `https://www.omdbapi.com/?s=${searchItem}&apikey=1ec7b4c0`;
     // const url = `https://www.omdbapi.com/?s=${searchItem}&apikey=${APIKEY}`;
 
