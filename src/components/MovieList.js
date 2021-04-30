@@ -22,8 +22,9 @@ const MovieList = (props) => {
           <div key={index}>
             <div className={classes.MovieDiv}>
               <div className={classes.MovieCard}>
-                <p>{movie.Title}</p>
-                <p>{movie.Year}</p>
+                <div>
+                  {movie.Title} • {movie.Year}
+                </div>
                 <div
                   className={classes.NomBtn}
                   onClick={() => props.handleNominate(movie)}

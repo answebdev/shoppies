@@ -7,6 +7,58 @@ const NominatedMovies = (props) => {
   return (
     <div>
       {props.movies.map((movie, index) => (
+        <div key={index}>
+          <div className={classes.NomMovieDiv}>
+            <div className={classes.Child}>
+              <div style={{ marginRight: '20px' }}>
+                <img style={{ height: '100px' }} src={movie.Poster} alt='' />
+              </div>
+              <div>
+                <p>
+                  {movie.Title} • {movie.Year}
+                </p>
+                <a
+                  href={`https://www.imdb.com/title/${movie.imdbID}`}
+                  // href={`https://www.imdb.com/title/${movie.imdbID.replace(
+                  //   /['"]+/g,
+                  //   ''
+                  // )}`}
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  <img style={{ width: '15%' }} src={imdb} alt='' />
+                </a>
+              </div>
+              {/* <p>{movie.Year}</p>
+              <p>{movie.Rated}</p>
+              <p>{movie.Genre}</p> */}
+
+              {/* <a
+                href={`https://www.imdb.com/title/${movie.imdbID}`}
+                // href={`https://www.imdb.com/title/${movie.imdbID.replace(
+                //   /['"]+/g,
+                //   ''
+                // )}`}
+                target='_blank'
+                rel='noreferrer noopener'
+              >
+                <img style={{ width: '20%' }} src={imdb} alt='' />
+              </a> */}
+              <div
+                className={classes.NomBtn}
+                onClick={() => props.handleRemove(movie)}
+              >
+                <RemoveNominatedMovie isNominated={props.isNominated} />
+              </div>
+
+              {/* <div>
+                  {!movie && !isLoading ? <div>Movie not found</div> : null}
+                </div> */}
+            </div>
+          </div>
+        </div>
+      ))}
+      {/* {props.movies.map((movie, index) => (
         <div className={classes.NominatedMovieCard} key={index}>
           <div className={classes.MovieDiv}>
             <div className={classes.MovieCard}>
@@ -32,7 +84,7 @@ const NominatedMovies = (props) => {
             </div>
           </div>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };

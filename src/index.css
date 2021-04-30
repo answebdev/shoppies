@@ -25,6 +25,8 @@ body {
   height: 100%;
 } */
 body {
+  background-color: #fbf7ed;
+  font-family: 'Open Sans', sans-serif;
   max-width: 1100px;
   margin: auto;
 }

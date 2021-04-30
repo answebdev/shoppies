@@ -46,7 +46,7 @@ const App = () => {
   const nominateMovie = (movie) => {
     const nominatedMovieList = [...nominate, movie];
     setNominate(nominatedMovieList);
-    setIsNominated(true);
+    // setIsNominated(true);
     // Specific movie nominated:
     console.log(movie);
     saveLocalStorage(nominatedMovieList);

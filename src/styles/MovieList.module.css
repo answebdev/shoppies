@@ -1,5 +1,5 @@
 .MovieDiv {
-  margin-top: 20px;
+  margin-bottom: 20px;
   letter-spacing: 1px;
 }
 
@@ -9,7 +9,7 @@
   gap: 2em;
   line-height: 1.2em;
   background-color: #ffffff;
-  width: 50%;
+  width: 80%;
   padding: 2em;
   border-radius: 2px;
   -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
