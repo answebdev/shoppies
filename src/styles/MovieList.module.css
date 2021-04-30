@@ -11,7 +11,7 @@
   background-color: #ffffff;
   width: 80%;
   padding: 2em;
-  border-radius: 2px;
+  border-radius: 0.25rem;
   -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
     0 1px 3px rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -29,7 +29,9 @@
   height: 100px;
   width: auto;
 }
-.NomBtn {
+
+button {
+  font-family: 'Open Sans', sans-serif;
   cursor: pointer;
   letter-spacing: 1px;
   background-color: #008060;
@@ -42,19 +44,20 @@
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
 }
 
-.NomBtn:hover {
+button:hover {
   background-color: #004d3a;
   color: #ffffff;
   text-decoration: none;
 }
 
-.NomBtn:active {
+button:active {
   background-color: #008060;
   color: #ffffff;
   border: 1px solid #008060;
 }
 
-.NomBtnDisabled {
+button:disabled {
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: 1px;
   background-color: #d3d3d3;
   color: #ffffff;
