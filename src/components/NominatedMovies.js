@@ -6,6 +6,11 @@ import imdb from '../../src/img/imdb.png';
 const NominatedMovies = (props) => {
   return (
     <div>
+      <h3>Your Nominations List</h3>
+      <p>Maximum 5 nominations allowed.</p>
+      <p>Movies Nominated: {props.movies.length}/5</p>
+      <br />
+
       {props.movies.map((movie, index) => (
         <div key={index}>
           <div className={classes.NomMovieDiv}>

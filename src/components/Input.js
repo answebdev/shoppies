@@ -4,6 +4,7 @@ import classes from '../styles/Input.module.css';
 const Input = (props) => {
   return (
     <div>
+      <p>Search below to nominate your top 5 favorite movies.</p>
       <input
         className={classes.Input}
         placeholder='Search movie titles'

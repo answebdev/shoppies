@@ -7,10 +7,14 @@ const MovieList = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
+  const { disableNominateButton } = props;
+
   return (
     <div className={classes.MovieDiv}>
       <div>
-        <h3>Movie results for: {props.searchItem}</h3>
+        <p>
+          <strong>Movie results for:</strong> {props.searchItem}
+        </p>
 
         <br />
 
@@ -26,10 +30,20 @@ const MovieList = (props) => {
                   {movie.Title} • {movie.Year}
                 </div>
                 <div
-                  className={classes.NomBtn}
-                  onClick={() => props.handleNominate(movie)}
+                // className={classes.NomBtn}
+                // onClick={() => props.handleNominate(movie)}
                 >
-                  <NominateButtonComponent isNominated={props.isNominated} />
+                  {/* <NominateButtonComponent
+                    isNominated={props.isNominated}
+                    disabled={disableNominateButton(movie.imdbID)}
+                  /> */}
+
+                  <button
+                    onClick={() => props.handleNominate(movie)}
+                    disabled={disableNominateButton(movie.imdbID)}
+                  >
+                    Nominate
+                  </button>
                 </div>
 
                 {/* <div>
