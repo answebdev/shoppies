@@ -13,7 +13,7 @@ const App = () => {
   const [nominate, setNominate] = useState([]);
   const [isNominated, setIsNominated] = useState(false);
 
-  //const APIKEY = process.env.REACT_APP_MOVIE_API_KEY;
+  // const APIKEY = process.env.REACT_APP_MOVIE_API_KEY;
 
   useEffect(() => {
     fetchMovies(searchItem);
@@ -31,8 +31,8 @@ const App = () => {
   };
 
   const fetchMovies = async (searchItem) => {
-    const url = `https://www.omdbapi.com/?s=${searchItem}&apikey=1ec7b4c0`;
-    //const url = `https://www.omdbapi.com/?s=${searchItem}&apikey=${APIKEY}`;
+    //const url = `https://www.omdbapi.com/?s=${searchItem}&apikey=1ec7b4c0`;
+    const url = `https://www.omdbapi.com/?s=${searchItem}&apikey=${process.env.REACT_APP_MOVIE_API_KEY}`;
 
     const response = await fetch(url);
     const data = await response.json();
