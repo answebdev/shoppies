@@ -6,6 +6,7 @@ import Input from './components/Input';
 import NominatedMovies from './components/NominatedMovies';
 import NominateButtonComponent from './components/NominateButtonComponent';
 import RemoveNominatedMovie from './components/RemoveNominatedMovie';
+import Swal from 'sweetalert2';
 import classes from './styles/App.module.css';
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
     }
   }, []);
 
+  // Save nominated movies to local storage
   const saveLocalStorage = (items) => {
     localStorage.setItem('shoppies-movies', JSON.stringify(items));
   };
@@ -42,6 +44,7 @@ const App = () => {
   //   }
   // };
 
+  // Fetch movie data
   const fetchMovies = async (searchItem) => {
     const url = `https://www.omdbapi.com/?s=${searchItem}&apikey=${process.env.REACT_APP_MOVIE_API_KEY}`;
 
@@ -61,13 +64,14 @@ const App = () => {
     }
   };
 
+  // Nominate a movie
   const nominateMovie = (movie) => {
     const nominatedMovieList = [...nominate, movie];
     setNominate(nominatedMovieList);
-    // console.log(movie);
     saveLocalStorage(nominatedMovieList);
   };
 
+  // Remove nominated movie from list
   const removeNominatedMovie = (movie) => {
     const nominatedMovieList = nominate.filter(
       (nominatedMovie) => nominatedMovie.imdbID !== movie.imdbID
@@ -77,6 +81,7 @@ const App = () => {
     saveLocalStorage(nominatedMovieList);
   };
 
+  // Disable Nominate button(s) after clicking or after 5 movies have been nominated
   const disableNominateButton = (movieId) => {
     return (
       nominate.length === 5 ||
@@ -84,10 +89,41 @@ const App = () => {
     );
   };
 
+  // Reset when Restart button is clicked
+  const handleReset = () => {
+    setMovies([]);
+    setNominate([]);
+    setSearchItem('');
+    saveLocalStorage('');
+  };
+
+  // Popup banner that shows after 5 movies have been nominated
+  const restart = () => {
+    Swal.fire({
+      title: 'Great Picks!',
+      text:
+        'You have reached the 5 film limit. Remove any film to select a new one, or click Restart to start over.',
+      imageUrl:
+        'https://1000logos.net/wp-content/uploads/2020/08/Shopify-Logo.jpg',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'The Shoppies',
+      showCancelButton: true,
+      confirmButtonColor: '#008060',
+      cancelButtonColor: '#95bf47',
+      confirmButtonText: 'Restart',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        handleReset();
+        Swal.close();
+      }
+    });
+  };
+
   return (
     <div>
       <div>
-        <MainHeading heading='The Shoppies' />
+        <MainHeading />
         <Input
           searchItem={searchItem}
           setSearchItem={setSearchItem}
@@ -120,6 +156,7 @@ const App = () => {
             nominateComponent={NominateButtonComponent}
             removeComponent={RemoveNominatedMovie}
             handleRemove={removeNominatedMovie}
+            restart={restart}
           />
         </div>
       </div>

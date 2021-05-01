@@ -11,9 +11,11 @@ const NominatedMovies = (props) => {
         <p>Maximum 5 nominations allowed.</p>
         <p>Movies Nominated: {props.movies.length}/5</p>
 
-        {props.movies.length === 5
-          ? 'You have reached the 5 film limit. Remove any film to select a new one.'
-          : null}
+        {props.movies.length === 5 ? props.restart() : null}
+
+        {/* {props.movies.length === 5 ? (
+          <button onClick={() => props.handleReset()}>RESET</button>
+        ) : null} */}
 
         {/* {props.movies.length === 5
         ? alert(
@@ -35,31 +37,13 @@ const NominatedMovies = (props) => {
                 </p>
                 <a
                   href={`https://www.imdb.com/title/${movie.imdbID}`}
-                  // href={`https://www.imdb.com/title/${movie.imdbID.replace(
-                  //   /['"]+/g,
-                  //   ''
-                  // )}`}
                   target='_blank'
                   rel='noreferrer noopener'
                 >
                   <img style={{ width: '15%' }} src={imdb} alt='' />
                 </a>
               </div>
-              {/* <p>{movie.Year}</p>
-              <p>{movie.Rated}</p>
-              <p>{movie.Genre}</p> */}
 
-              {/* <a
-                href={`https://www.imdb.com/title/${movie.imdbID}`}
-                // href={`https://www.imdb.com/title/${movie.imdbID.replace(
-                //   /['"]+/g,
-                //   ''
-                // )}`}
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                <img style={{ width: '20%' }} src={imdb} alt='' />
-              </a> */}
               <div
                 className={classes.NomBtn}
                 onClick={() => props.handleRemove(movie)}

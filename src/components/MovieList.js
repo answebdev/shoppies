@@ -33,6 +33,7 @@ const MovieList = (props) => {
                 </div>
                 <div>
                   <button
+                    className={classes.Button}
                     onClick={() => props.handleNominate(movie)}
                     disabled={disableNominateButton(movie.imdbID)}
                   >

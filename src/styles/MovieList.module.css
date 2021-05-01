@@ -47,7 +47,7 @@
   width: auto;
 }
 
-button {
+.Button {
   font-family: 'Open Sans', sans-serif;
   /* cursor: pointer;
   letter-spacing: 1px;
@@ -81,7 +81,7 @@ button {
   border-color: transparent;
 }
 
-button:hover {
+.Button:hover {
   background-color: #004d3a;
   color: #ffffff;
   text-decoration: none;
@@ -105,7 +105,7 @@ button:hover {
   border-color: transparent;
 }
 
-button:active {
+.Button:active {
   background-color: #008060;
   color: #ffffff;
   border: 1px solid #008060;
@@ -129,7 +129,7 @@ button:active {
   border-color: transparent;
 }
 
-button:disabled {
+.Button:disabled {
   font-family: 'Open Sans', sans-serif;
   background-color: #d3d3d3;
   color: #ffffff;

@@ -18,6 +18,12 @@
   margin-bottom: 7.8em;
 }
 
+button {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+}
+
 /* MEDIA QUERIES */
 /* @media (max-width: 1024px) {
   .Input {
