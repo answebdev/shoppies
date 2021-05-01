@@ -28,10 +28,10 @@ const NominatedMovies = (props) => {
         <div key={index}>
           <div className={classes.NomMovieDiv}>
             <div className={classes.Child}>
-              <div style={{ marginRight: '20px' }}>
+              <div>
                 <img className={classes.PosterImg} src={movie.Poster} alt='' />
               </div>
-              <div>
+              <div className={classes.DetailsDiv}>
                 <p className={classes.MovieDetails}>
                   {movie.Title} • {movie.Year}
                 </p>

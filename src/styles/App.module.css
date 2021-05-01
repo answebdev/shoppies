@@ -68,7 +68,7 @@ button {
 
 @media (max-width: 750px) {
   .BigChild {
-    /* background-color: red; */
+    /* background-color: steelblue; */
     flex-direction: column;
     gap: 1;
   }

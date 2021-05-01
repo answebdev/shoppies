@@ -173,17 +173,23 @@
 @media (max-width: 750px) {
   .MovieCard {
     width: 100%;
+    flex-direction: column;
+    text-align: center;
   }
 }
 
 @media (max-width: 376px) {
   .MovieCard {
     width: 100%;
+    flex-direction: column;
+    text-align: center;
   }
 }
 
 @media (max-width: 280px) {
   .MovieCard {
     width: 100%;
+    flex-direction: column;
+    text-align: center;
   }
 }

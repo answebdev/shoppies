@@ -160,36 +160,6 @@ const App = () => {
         </div>
       </div>
     </div>
-
-    // <div className={classes.Parent}>
-    //   <div className={classes.Child1}>
-    //     <MainHeading heading='Movies' />
-    //     <Input
-    //       searchItem={searchItem}
-    //       setSearchItem={setSearchItem}
-    //       nominate={nominate}
-    //     />
-    //     <MovieList
-    //       disableNominateButton={disableNominateButton}
-    //       movies={movies}
-    //       searchItem={searchItem}
-    //       handleNominate={nominateMovie}
-    //       nominateComponent={NominateButtonComponent}
-    //       isNominated={isNominated}
-    //       setIsNominated={setIsNominated}
-    //     />
-    //   </div>
-    //   <div className={classes.Child2}>
-    //     <MainHeading heading='Nominated Movies' />
-    //     <NominatedMovies
-    //       movies={nominate}
-    //       handleNominate={nominateMovie}
-    //       nominateComponent={NominateButtonComponent}
-    //       removeComponent={RemoveNominatedMovie}
-    //       handleRemove={removeNominatedMovie}
-    //     />
-    //   </div>
-    // </div>
   );
 };
 

@@ -12,7 +12,7 @@ const MovieList = (props) => {
   const { disableNominateButton } = props;
 
   return (
-    <div className={classes.MovieDiv}>
+    <div className={classes.Container}>
       <div>
         {/* <p>
           <strong>Movie results for:</strong> {props.searchItem}
