@@ -4,6 +4,7 @@ import classes from '../styles/Input.module.css';
 const Input = (props) => {
   return (
     <div>
+      {/* <p className={classes.LeadText}>Nominate your favorite movies.</p> */}
       <p className={classes.LeadText}>
         Search below to nominate your top 5 favorite movies.
       </p>

@@ -3,7 +3,7 @@ import classes from '../styles/NomButton.module.css';
 
 const NominateButtonComponent = (props) => {
   return (
-    <div>
+    <>
       {props.isNominated ? (
         <button className={classes.NomBtnDisabled} disabled>
           Nominated
@@ -11,7 +11,7 @@ const NominateButtonComponent = (props) => {
       ) : (
         <button className={classes.NomBtn}>Nominate</button>
       )}
-    </div>
+    </>
   );
 };
 

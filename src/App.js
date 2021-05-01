@@ -14,8 +14,6 @@ const App = () => {
   const [nominate, setNominate] = useState([]);
   const [isNominated, setIsNominated] = useState(false);
 
-  // const APIKEY = process.env.REACT_APP_MOVIE_API_KEY;
-
   useEffect(() => {
     fetchMovies(searchItem);
   }, [searchItem]);
@@ -31,14 +29,34 @@ const App = () => {
     localStorage.setItem('shoppies-movies', JSON.stringify(items));
   };
 
+  // ORIGINAL REQUEST
+  // const fetchMovies = async (searchItem) => {
+  //   const url = `https://www.omdbapi.com/?s=${searchItem}&apikey=${process.env.REACT_APP_MOVIE_API_KEY}`;
+
+  //   const response = await fetch(url);
+  //   const data = await response.json();
+
+  //   if (data.Search) {
+  //     console.log(data);
+  //     setMovies(data.Search);
+  //   }
+  // };
+
   const fetchMovies = async (searchItem) => {
     const url = `https://www.omdbapi.com/?s=${searchItem}&apikey=${process.env.REACT_APP_MOVIE_API_KEY}`;
 
     const response = await fetch(url);
     const data = await response.json();
 
+    fetch(url)
+      .then((response) => {
+        return response.json();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
     if (data.Search) {
-      console.log(data);
       setMovies(data.Search);
     }
   };
@@ -46,9 +64,7 @@ const App = () => {
   const nominateMovie = (movie) => {
     const nominatedMovieList = [...nominate, movie];
     setNominate(nominatedMovieList);
-    //setIsNominated(true);
-    // Specific movie nominated:
-    console.log(movie);
+    // console.log(movie);
     saveLocalStorage(nominatedMovieList);
   };
 
@@ -56,7 +72,6 @@ const App = () => {
     const nominatedMovieList = nominate.filter(
       (nominatedMovie) => nominatedMovie.imdbID !== movie.imdbID
     );
-    // console.log('Remove');
     setNominate(nominatedMovieList);
     setIsNominated(false);
     saveLocalStorage(nominatedMovieList);

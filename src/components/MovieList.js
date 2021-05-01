@@ -3,9 +3,11 @@ import Spinner from './misc/Spinner';
 import classes from '../styles/MovieList.module.css';
 
 const MovieList = (props) => {
-  const NominateButtonComponent = props.nominateComponent;
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(false);
+  // const NominateButtonComponent = props.nominateComponent;
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [error, setError] = useState(false);
+  const [isLoading] = useState(false);
+  const [error] = useState(false);
 
   const { disableNominateButton } = props;
 
@@ -29,15 +31,7 @@ const MovieList = (props) => {
                 <div>
                   {movie.Title} • {movie.Year}
                 </div>
-                <div
-                // className={classes.NomBtn}
-                // onClick={() => props.handleNominate(movie)}
-                >
-                  {/* <NominateButtonComponent
-                    isNominated={props.isNominated}
-                    disabled={disableNominateButton(movie.imdbID)}
-                  /> */}
-
+                <div>
                   <button
                     onClick={() => props.handleNominate(movie)}
                     disabled={disableNominateButton(movie.imdbID)}

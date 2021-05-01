@@ -30,7 +30,7 @@ const NominatedMovies = (props) => {
                 <img className={classes.PosterImg} src={movie.Poster} alt='' />
               </div>
               <div>
-                <p>
+                <p className={classes.MovieDetails}>
                   {movie.Title} • {movie.Year}
                 </p>
                 <a

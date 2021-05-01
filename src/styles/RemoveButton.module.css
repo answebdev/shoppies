@@ -1,5 +1,6 @@
 .RemoveBtn {
-  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  /* cursor: pointer;
   letter-spacing: 1px;
   background-color: #008060;
   color: #ffffff;
@@ -8,17 +9,72 @@
   border: 1px solid #008060;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25); */
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 150ms ease;
+  transition-property: background-color, border-color, box-shadow, color;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+  background-color: #008060;
+  color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
 }
 
 .RemoveBtn:hover {
   background-color: #004d3a;
   color: #ffffff;
   text-decoration: none;
+
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 150ms ease;
+  transition-property: background-color, border-color, box-shadow, color;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
 }
 
 .RemoveBtn:active {
   background-color: #008060;
   color: #ffffff;
   border: 1px solid #008060;
+
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 150ms ease;
+  transition-property: background-color, border-color, box-shadow, color;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
 }
