@@ -1,8 +1,21 @@
-.LeadText {
+.LeadTextDiv {
   margin-bottom: 40px;
-  font-size: 1.5em;
-  color: #004c3f;
+}
+
+.LeadText1 {
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-size: 3em;
+  color: #90660a;
   font-weight: 700;
+}
+
+.LeadText2 {
+  line-height: 1.2;
+  margin-bottom: 40px;
+  font-size: 1.8em;
+  color: #004c3f;
+  font-weight: 600;
 }
 
 .Input {
@@ -25,7 +38,7 @@
   margin: 0 0 15px;
   padding: 1em 0.9375em;
   color: #212326;
-  font-family: ShopifySans, Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   box-shadow: 0 0 0 1px #6b7177;
   border: 1px solid transparent;
@@ -54,4 +67,55 @@ input:disabled {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   padding: 1.5em 2em;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .LeadText1 {
+    font-size: 3em;
+  }
+
+  .LeadText2 {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .LeadText1 {
+    font-size: 2.8em;
+  }
+
+  .LeadText2 {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 750px) {
+  .LeadText1 {
+    font-size: 2.6em;
+  }
+
+  .LeadText2 {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 376px) {
+  .LeadText1 {
+    font-size: 2.4em;
+  }
+
+  .LeadText2 {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 280px) {
+  .LeadText1 {
+    font-size: 2.2em;
+  }
+
+  .LeadText2 {
+    font-size: 1em;
+  }
 }

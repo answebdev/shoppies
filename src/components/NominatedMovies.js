@@ -40,7 +40,7 @@ const NominatedMovies = (props) => {
                   target='_blank'
                   rel='noreferrer noopener'
                 >
-                  <img style={{ width: '15%' }} src={imdb} alt='' />
+                  <img className={classes.Imdb} src={imdb} alt='' />
                 </a>
               </div>
 

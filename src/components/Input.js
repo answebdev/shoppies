@@ -4,10 +4,19 @@ import classes from '../styles/Input.module.css';
 const Input = (props) => {
   return (
     <div>
-      <p className={classes.LeadText}>Nominate your favorite movies.</p>
-      <p className={classes.LeadText}>
-        Search below to nominate your top 5 favorite movies.
-      </p>
+      <div className={classes.LeadTextDiv}>
+        <div className={classes.LeadText1}>
+          Nominate your
+          <br />
+          favorite movies.
+        </div>
+
+        <div className={classes.LeadText2}>
+          Search below to nominate
+          <br />
+          your top 5 favorite movies.
+        </div>
+      </div>
       {props.nominate.length === 5 ? (
         <input
           disabled

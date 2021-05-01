@@ -156,3 +156,34 @@
   border-style: solid;
   border-color: transparent;
 }
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .MovieCard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .MovieCard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .MovieCard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 376px) {
+  .MovieCard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 280px) {
+  .MovieCard {
+    width: 100%;
+  }
+}

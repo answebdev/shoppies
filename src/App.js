@@ -137,7 +137,6 @@ const App = () => {
             <ResultsHeader searchItem={searchItem} />
           </div>
 
-          {/* Winner Banner Here? */}
           <MovieList
             disableNominateButton={disableNominateButton}
             movies={movies}
@@ -159,6 +158,7 @@ const App = () => {
             restart={restart}
           />
         </div>
+
       </div>
     </div>
 

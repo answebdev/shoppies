@@ -24,48 +24,95 @@ button {
   letter-spacing: 1px !important;
 }
 
+.LogoImg {
+  width: 25%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
 /* MEDIA QUERIES */
-/* @media (max-width: 1024px) {
-  .Input {
-    width: 100%;
-  }
-  .MovieCard {
+@media (max-width: 1024px) {
+  .BigChild {
+    background-color: yellow;
+    /* flex-direction: column; */
+    flex-direction: column-reverse;
     gap: 1;
-    width: 100%;
+  }
+
+  .ResultsDiv {
+    margin-bottom: 20px;
+  }
+
+  .LogoImg {
+    width: 35%;
+    height: auto;
   }
 }
 
 @media (max-width: 768px) {
-  .MovieCard {
+  .BigChild {
+    background-color: blue;
+    flex-direction: column-reverse;
     gap: 1;
-    width: 100%;
+  }
+
+  .ResultsDiv {
+    margin-bottom: 20px;
+  }
+
+  .LogoImg {
+    width: 35%;
+    height: auto;
   }
 }
 
 @media (max-width: 750px) {
-  .MovieCard {
-    flex-direction: column;
+  .BigChild {
+    background-color: red;
+    flex-direction: column-reverse;
     gap: 1;
+  }
+
+  .ResultsDiv {
+    margin-bottom: 20px;
+  }
+
+  .LogoImg {
+    width: 45%;
+    height: auto;
   }
 }
 
 @media (max-width: 376px) {
-  .MovieCard {
-    flex-direction: column;
+  .BigChild {
+    background-color: green;
+    flex-direction: column-reverse;
     gap: 1;
-    width: 100%;
+  }
+
+  .ResultsDiv {
+    margin-bottom: 20px;
+  }
+
+  .LogoImg {
+    width: 45%;
+    height: auto;
   }
 }
 
 @media (max-width: 280px) {
-  .MovieCard {
-    flex-direction: column;
+  .BigChild {
+    background-color: pink;
+    flex-direction: column-reverse;
     gap: 1;
-    width: 100%;
   }
 
-  img {
-    height: 55px;
-    width: auto;
+  .ResultsDiv {
+    margin-bottom: 20px;
   }
-} */
+
+  .LogoImg {
+    width: 50%;
+    height: auto;
+  }
+}

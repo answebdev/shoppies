@@ -1,11 +1,12 @@
 import React from 'react';
 import logo from '../img/shoppies-logo.png';
+import classes from '../styles/App.module.css';
 
 const MainHeading = (props) => {
   return (
     <div>
       <div>
-        <img style={{ width: '25%', marginBottom: '40px' }} src={logo} alt='' />
+        <img className={classes.LogoImg} src={logo} alt='' />
       </div>
     </div>
   );

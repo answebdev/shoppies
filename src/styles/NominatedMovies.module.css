@@ -47,3 +47,69 @@
   margin-right: 10px;
   line-height: 1.5;
 }
+
+.Imdb {
+  width: 15%;
+  height: auto;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .NomMovieDiv,
+  .TopDiv {
+    width: 100%;
+  }
+
+  .Imdb {
+    width: 10%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .NomMovieDiv,
+  .TopDiv {
+    width: 100%;
+  }
+
+  .Imdb {
+    width: 10%;
+    height: auto;
+  }
+}
+
+@media (max-width: 750px) {
+  .NomMovieDiv,
+  .TopDiv {
+    width: 100%;
+  }
+
+  .Imdb {
+    width: 15%;
+    height: auto;
+  }
+}
+
+@media (max-width: 376px) {
+  .NomMovieDiv,
+  .TopDiv {
+    width: 100%;
+  }
+
+  .Imdb {
+    width: 15%;
+    height: auto;
+  }
+}
+
+@media (max-width: 280px) {
+  .NomMovieDiv,
+  .TopDiv {
+    width: 100%;
+  }
+
+  .Imdb {
+    width: 15%;
+    height: auto;
+  }
+}
