@@ -158,7 +158,6 @@ const App = () => {
             restart={restart}
           />
         </div>
-
       </div>
     </div>
 
