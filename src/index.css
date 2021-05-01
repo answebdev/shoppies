@@ -1,10 +1,11 @@
-/* * {
+* {
   box-sizing: border-box;
-} */
+}
 body {
   background-color: #fbf7ed;
   letter-spacing: 0.5px;
   font-family: 'Open Sans', sans-serif;
   max-width: 1100px;
   margin: auto;
+  padding: 4em;
 }

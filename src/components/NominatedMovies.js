@@ -6,17 +6,28 @@ import imdb from '../../src/img/imdb.png';
 const NominatedMovies = (props) => {
   return (
     <div>
-      <h3>Your Nominations List</h3>
-      <p>Maximum 5 nominations allowed.</p>
-      <p>Movies Nominated: {props.movies.length}/5</p>
-      <br />
+      <div className={classes.TopDiv}>
+        <h3>Your Nominations List</h3>
+        <p>Maximum 5 nominations allowed.</p>
+        <p>Movies Nominated: {props.movies.length}/5</p>
+
+        {props.movies.length === 5
+          ? 'You have reached the 5 film limit. Remove any film to select a new one.'
+          : null}
+
+        {/* {props.movies.length === 5
+        ? alert(
+            'You have reached the 5 film limit. Remove any film to select a new one.'
+          )
+        : null} */}
+      </div>
 
       {props.movies.map((movie, index) => (
         <div key={index}>
           <div className={classes.NomMovieDiv}>
             <div className={classes.Child}>
               <div style={{ marginRight: '20px' }}>
-                <img style={{ height: '100px' }} src={movie.Poster} alt='' />
+                <img className={classes.PosterImg} src={movie.Poster} alt='' />
               </div>
               <div>
                 <p>

@@ -12,9 +12,25 @@
   width: 80%;
   padding: 2em;
   border-radius: 0.25rem;
-  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+  /* -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
     0 1px 3px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); */
+  box-shadow: 0 0 0 1px #6b7177;
+
+  /* height: 3.2em;
+  width: 100%;
+  margin: 0 0 15px;
+  padding: 1em 0.9375em;
+  color: #212326;
+  font-family: ShopifySans, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  box-shadow: 0 0 0 1px #6b7177;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: padding 150ms;
+  -webkit-appearance: none;
+  appearance: none; */
 }
 
 .NomBtn {

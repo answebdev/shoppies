@@ -12,11 +12,11 @@ const MovieList = (props) => {
   return (
     <div className={classes.MovieDiv}>
       <div>
-        <p>
+        {/* <p>
           <strong>Movie results for:</strong> {props.searchItem}
         </p>
 
-        <br />
+        <br /> */}
 
         {/* <div>
           {!props.movies && !isLoading ? <div>Movie not found</div> : null}

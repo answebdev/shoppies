@@ -1,18 +1,57 @@
+.LeadText {
+  margin-bottom: 40px;
+  font-size: 1.5em;
+  color: #004c3f;
+  font-weight: 700;
+}
+
 .Input {
-  display: flex;
+  /* display: flex;
   justify-content: flex-start;
   gap: 2em;
-  padding: 0.5em 1em;
+  padding: 18px 44px 18px 24px;
   border: none;
   background-color: #ffffff;
-  width: 85%;
-  border-radius: 2px;
+  margin-bottom: 20px;
+  border-radius: 0.25rem;
+  font-size: 1em;
+  width: 100%;
   -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
     0 1px 3px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); */
+  display: inline-block;
+  height: 3.2em;
+  width: 100%;
+  margin: 0 0 15px;
+  padding: 1em 0.9375em;
+  color: #212326;
+  font-family: ShopifySans, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  box-shadow: 0 0 0 1px #6b7177;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: padding 150ms;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 ::placeholder {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.5px;
+}
+
+input[type='text'] {
+  letter-spacing: 0.5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+}
+
+input:disabled {
+  /* background-color: #f7f4ed; */
+  background-color: #e4e4e4;
+  letter-spacing: 0.5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  padding: 1.5em 2em;
 }

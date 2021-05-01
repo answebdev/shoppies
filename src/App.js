@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MovieList from './components/MovieList';
 import MainHeading from './components/MainHeading';
+import ResultsHeader from './components/ResultsHeader';
 import Input from './components/Input';
 import NominatedMovies from './components/NominatedMovies';
 import NominateButtonComponent from './components/NominateButtonComponent';
@@ -69,31 +70,75 @@ const App = () => {
   };
 
   return (
-    <div className={classes.Parent}>
-      <div className={classes.Child1}>
-        <MainHeading heading='Movies' />
-        <Input searchItem={searchItem} setSearchItem={setSearchItem} />
-        <MovieList
-          disableNominateButton={disableNominateButton}
-          movies={movies}
+    <div>
+      <div>
+        <MainHeading heading='The Shoppies' />
+        <Input
           searchItem={searchItem}
-          handleNominate={nominateMovie}
-          nominateComponent={NominateButtonComponent}
-          isNominated={isNominated}
-          setIsNominated={setIsNominated}
+          setSearchItem={setSearchItem}
+          nominate={nominate}
         />
       </div>
-      <div className={classes.Child2}>
-        <MainHeading heading='Nominated Movies' />
-        <NominatedMovies
-          movies={nominate}
-          handleNominate={nominateMovie}
-          nominateComponent={NominateButtonComponent}
-          removeComponent={RemoveNominatedMovie}
-          handleRemove={removeNominatedMovie}
-        />
+
+      <div className={classes.BigChild}>
+        <div className={classes.Child1}>
+          <div className={classes.ResultsDiv}>
+            <ResultsHeader searchItem={searchItem} />
+          </div>
+
+          {/* Winner Banner Here? */}
+          <MovieList
+            disableNominateButton={disableNominateButton}
+            movies={movies}
+            handleNominate={nominateMovie}
+            nominateComponent={NominateButtonComponent}
+            isNominated={isNominated}
+            setIsNominated={setIsNominated}
+          />
+        </div>
+
+        <div className={classes.Child2}>
+          {/* <MainHeading heading='Nominated Movies' /> */}
+          <NominatedMovies
+            movies={nominate}
+            handleNominate={nominateMovie}
+            nominateComponent={NominateButtonComponent}
+            removeComponent={RemoveNominatedMovie}
+            handleRemove={removeNominatedMovie}
+          />
+        </div>
       </div>
     </div>
+
+    // <div className={classes.Parent}>
+    //   <div className={classes.Child1}>
+    //     <MainHeading heading='Movies' />
+    //     <Input
+    //       searchItem={searchItem}
+    //       setSearchItem={setSearchItem}
+    //       nominate={nominate}
+    //     />
+    //     <MovieList
+    //       disableNominateButton={disableNominateButton}
+    //       movies={movies}
+    //       searchItem={searchItem}
+    //       handleNominate={nominateMovie}
+    //       nominateComponent={NominateButtonComponent}
+    //       isNominated={isNominated}
+    //       setIsNominated={setIsNominated}
+    //     />
+    //   </div>
+    //   <div className={classes.Child2}>
+    //     <MainHeading heading='Nominated Movies' />
+    //     <NominatedMovies
+    //       movies={nominate}
+    //       handleNominate={nominateMovie}
+    //       nominateComponent={NominateButtonComponent}
+    //       removeComponent={RemoveNominatedMovie}
+    //       handleRemove={removeNominatedMovie}
+    //     />
+    //   </div>
+    // </div>
   );
 };
 
