@@ -125,6 +125,7 @@ const App = () => {
       <div>
         <MainHeading />
         <Input
+          movies={nominate}
           searchItem={searchItem}
           setSearchItem={setSearchItem}
           nominate={nominate}

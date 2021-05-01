@@ -13,33 +13,12 @@
   width: 80%;
   padding: 2em;
   border-radius: 0.25rem;
-  /* -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
-    0 1px 3px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); */
   box-shadow: 0 0 0 1px #6b7177;
-
-  /* height: 3.2em;
-  width: 100%;
-  margin: 0 0 15px;
-  padding: 1em 0.9375em;
-  color: #212326;
-  font-family: ShopifySans, Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  box-shadow: 0 0 0 1px #6b7177;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  background-color: #ffffff;
-  transition: padding 150ms;
-  -webkit-appearance: none;
-  appearance: none; */
 }
 
 .NomBtn {
-  /* float: right; */
   align-self: center;
   justify-self: right;
-  /* box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
-  background-color: #004c3f; */
 }
 
 .MovieImage {
@@ -49,17 +28,6 @@
 
 .Button {
   font-family: 'Open Sans', sans-serif;
-  /* cursor: pointer;
-  letter-spacing: 1px;
-  background-color: #008060;
-  color: #ffffff;
-  padding: 6px 12px;
-  border-radius: 0.25rem;
-  border: 1px solid #008060;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25); */
-
   display: inline-block;
   padding: 6px 12px;
   border-radius: 4px;
@@ -85,7 +53,6 @@
   background-color: #004d3a;
   color: #ffffff;
   text-decoration: none;
-
   display: inline-block;
   padding: 6px 12px;
   border-radius: 4px;
@@ -109,7 +76,6 @@
   background-color: #008060;
   color: #ffffff;
   border: 1px solid #008060;
-
   display: inline-block;
   padding: 6px 12px;
   border-radius: 4px;
@@ -133,11 +99,6 @@
   font-family: 'Open Sans', sans-serif;
   background-color: #d3d3d3;
   color: #ffffff;
-  /* padding: 6px 12px;
-  border-radius: 0.25rem;
-  border: 1px solid #d3d3d3;
-   letter-spacing: 1px; */
-
   display: inline-block;
   padding: 6px 12px;
   border-radius: 4px;

@@ -1,3 +1,8 @@
+.TopBox {
+  display: flex;
+  justify-content: space-between;
+}
+
 .LeadTextDiv {
   margin-bottom: 40px;
 }
@@ -17,21 +22,12 @@
   color: #004c3f;
   font-weight: 600;
 }
+.LeadText3 {
+  font-size: 1.5em;
+  color: #004c3f;
+}
 
 .Input {
-  /* display: flex;
-  justify-content: flex-start;
-  gap: 2em;
-  padding: 18px 44px 18px 24px;
-  border: none;
-  background-color: #ffffff;
-  margin-bottom: 20px;
-  border-radius: 0.25rem;
-  font-size: 1em;
-  width: 100%;
-  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
-    0 1px 3px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); */
   display: inline-block;
   height: 3.2em;
   width: 100%;
@@ -61,7 +57,6 @@ input[type='text'] {
 }
 
 input:disabled {
-  /* background-color: #f7f4ed; */
   background-color: #e4e4e4;
   letter-spacing: 0.5px;
   font-family: 'Open Sans', sans-serif;
@@ -71,51 +66,101 @@ input:disabled {
 
 /* MEDIA QUERIES */
 @media (max-width: 1024px) {
+  .TopBox {
+    flex-direction: column;
+  }
+
   .LeadText1 {
     font-size: 3em;
   }
 
   .LeadText2 {
     font-size: 1.8em;
+    margin-bottom: 0;
+  }
+
+  .LeadText3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 768px) {
+  .TopBox {
+    flex-direction: column;
+  }
+
   .LeadText1 {
     font-size: 2.8em;
   }
 
   .LeadText2 {
     font-size: 1.6em;
+    margin-bottom: 0;
+  }
+
+  .LeadText3 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 750px) {
+  .TopBox {
+    flex-direction: column;
+  }
+
   .LeadText1 {
     font-size: 2.6em;
   }
 
   .LeadText2 {
     font-size: 1.4em;
+    margin-bottom: 0;
+  }
+
+  .LeadText3 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 376px) {
+  .TopBox {
+    flex-direction: column;
+  }
+
   .LeadText1 {
     font-size: 2.4em;
   }
 
   .LeadText2 {
     font-size: 1.2em;
+    margin-bottom: 0;
+  }
+
+  .LeadText3 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 280px) {
+  .TopBox {
+    flex-direction: column;
+  }
+
   .LeadText1 {
     font-size: 2.2em;
   }
 
   .LeadText2 {
     font-size: 1em;
+    margin-bottom: 0;
+  }
+
+  .LeadText3 {
+    font-size: 1em;
+    margin-bottom: 20px;
   }
 }

@@ -7,9 +7,16 @@ const NominatedMovies = (props) => {
   return (
     <div>
       <div className={classes.TopDiv}>
-        <h3>Your Nominations List</h3>
-        <p>Maximum 5 nominations allowed.</p>
-        <p>Movies Nominated: {props.movies.length}/5</p>
+        <p className={classes.NominationsList}>
+          <strong>Your Nominations</strong>
+        </p>
+        {/* <div className={classes.NominationsListSub}>
+          <p>
+            Maximum 5 nominations allowed.
+            <br />
+            Movies Nominated: {props.movies.length}/5
+          </p>
+        </div> */}
 
         {props.movies.length === 5 ? props.restart() : null}
 

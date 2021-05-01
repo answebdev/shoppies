@@ -4,17 +4,23 @@ import classes from '../styles/Input.module.css';
 const Input = (props) => {
   return (
     <div>
-      <div className={classes.LeadTextDiv}>
-        <div className={classes.LeadText1}>
-          Nominate your
-          <br />
-          favorite movies.
+      <div className={classes.TopBox}>
+        <div className={classes.LeadTextDiv}>
+          <div className={classes.LeadText1}>
+            Nominate your
+            <br />
+            favorite movies.
+          </div>
+
+          <div className={classes.LeadText2}>
+            Search below to nominate
+            <br />
+            your top 5 favorite movies.
+          </div>
         </div>
 
-        <div className={classes.LeadText2}>
-          Search below to nominate
-          <br />
-          your top 5 favorite movies.
+        <div className={classes.LeadText3}>
+          <strong>Movies Nominated: </strong> {props.movies.length}/5
         </div>
       </div>
       {props.nominate.length === 5 ? (

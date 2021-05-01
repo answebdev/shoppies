@@ -1,3 +1,13 @@
+.NominationsList {
+  font-size: 1.5em;
+}
+
+.NominationsListSub {
+  line-height: 1.5;
+  font-size: 1.2em;
+  color: #004c3f;
+}
+
 .NomMovieDiv {
   display: flex;
   justify-content: space-between;
@@ -7,18 +17,15 @@
   background-color: #ffffff;
   line-height: 1.2em;
   background-color: #ffffff;
-  /* width: 80%; */
   padding: 1.5em;
   border-radius: 0.25rem;
-  /* -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
-    0 1px 3px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); */
   box-shadow: 0 0 0 1px #6b7177;
+  -webkit-animation: fade-out 1s ease-out both;
+  animation: fade-out 1s ease-out both;
 }
 
 .TopDiv {
   width: 500px;
-  margin-bottom: 40px;
 }
 
 .Child {
