@@ -60,6 +60,10 @@
     width: 100%;
   }
 
+  .TopDiv {
+    margin-bottom: 20px;
+  }
+
   .Imdb {
     width: 10%;
     height: auto;
@@ -70,6 +74,10 @@
   .NomMovieDiv,
   .TopDiv {
     width: 100%;
+  }
+
+  .TopDiv {
+    margin-bottom: 20px;
   }
 
   .Imdb {
@@ -84,6 +92,10 @@
     width: 100%;
   }
 
+  .TopDiv {
+    margin-bottom: 20px;
+  }
+
   .Imdb {
     width: 15%;
     height: auto;
@@ -96,6 +108,10 @@
     width: 100%;
   }
 
+  .TopDiv {
+    margin-bottom: 20px;
+  }
+
   .Imdb {
     width: 15%;
     height: auto;
@@ -106,6 +122,10 @@
   .NomMovieDiv,
   .TopDiv {
     width: 100%;
+  }
+
+  .TopDiv {
+    margin-bottom: 20px;
   }
 
   .Imdb {

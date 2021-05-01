@@ -33,9 +33,9 @@ button {
 /* MEDIA QUERIES */
 @media (max-width: 1024px) {
   .BigChild {
-    background-color: yellow;
-    /* flex-direction: column; */
-    flex-direction: column-reverse;
+    /* background-color: yellow; */
+    flex-direction: column;
+    /* flex-direction: column-reverse; */
     gap: 1;
   }
 
@@ -51,8 +51,8 @@ button {
 
 @media (max-width: 768px) {
   .BigChild {
-    background-color: blue;
-    flex-direction: column-reverse;
+    /* background-color: blue; */
+    flex-direction: column;
     gap: 1;
   }
 
@@ -68,8 +68,8 @@ button {
 
 @media (max-width: 750px) {
   .BigChild {
-    background-color: red;
-    flex-direction: column-reverse;
+    /* background-color: red; */
+    flex-direction: column;
     gap: 1;
   }
 
@@ -85,8 +85,8 @@ button {
 
 @media (max-width: 376px) {
   .BigChild {
-    background-color: green;
-    flex-direction: column-reverse;
+    /* background-color: green; */
+    flex-direction: column;
     gap: 1;
   }
 
@@ -102,8 +102,8 @@ button {
 
 @media (max-width: 280px) {
   .BigChild {
-    background-color: pink;
-    flex-direction: column-reverse;
+    /* background-color: pink; */
+    flex-direction: column;
     gap: 1;
   }
 
