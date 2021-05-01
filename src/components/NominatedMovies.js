@@ -7,9 +7,15 @@ const NominatedMovies = (props) => {
   return (
     <div>
       <div className={classes.TopDiv}>
-        <p className={classes.NominationsList}>
+        {/* <p className={classes.NominationsList}>
           <strong>Your Nominations</strong>
-        </p>
+        </p> */}
+
+        {props.movies.length > 0 ? (
+          <p className={classes.NominationsList}>
+            <strong>Your Nominations</strong>
+          </p>
+        ) : null}
         {/* <div className={classes.NominationsListSub}>
           <p>
             Maximum 5 nominations allowed.

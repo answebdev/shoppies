@@ -14,16 +14,6 @@ const MovieList = (props) => {
   return (
     <div className={classes.Container}>
       <div>
-        {/* <p>
-          <strong>Movie results for:</strong> {props.searchItem}
-        </p>
-
-        <br /> */}
-
-        {/* <div>
-          {!props.movies && !isLoading ? <div>Movie not found</div> : null}
-        </div> */}
-
         {props.movies.map((movie, index) => (
           <div key={index}>
             <div className={classes.MovieDiv}>
