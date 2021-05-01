@@ -1,7 +1,7 @@
 import React from 'react';
 import RemoveNominatedMovie from './RemoveNominatedMovie';
 import classes from '../styles/NominatedMovies.module.css';
-import imdb from '../../src/img/imdb.png';
+import imdb from '../../src/img/imdb.webp';
 
 const NominatedMovies = (props) => {
   return (

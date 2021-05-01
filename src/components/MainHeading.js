@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../img/shoppies-logo.png';
+import logo from '../img/shoppies-logo.webp';
 import classes from '../styles/App.module.css';
 
 const MainHeading = (props) => {
