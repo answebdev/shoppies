@@ -10,7 +10,7 @@ const NominatedMovies = (props) => {
       <div className={classes.TopDiv}>
         {props.movies.length > 0 ? (
           <p className={classes.NominationsList}>
-            <strong>Your Nominations</strong>
+            <strong>Nominations</strong>
           </p>
         ) : null}
         {props.movies.length === 5 ? props.restart() : null}

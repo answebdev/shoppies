@@ -6,6 +6,7 @@ import Input from './components/Input';
 import NominatedMovies from './components/NominatedMovies';
 import NominateButtonComponent from './components/NominateButtonComponent';
 import RemoveNominatedMovie from './components/RemoveNominatedMovie';
+import useDebounce from './components/utilities/useDebounce';
 import Swal from 'sweetalert2';
 import classes from './styles/App.module.css';
 
@@ -14,10 +15,36 @@ const App = () => {
   const [searchItem, setSearchItem] = useState('');
   const [nominate, setNominate] = useState([]);
   const [isNominated, setIsNominated] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  // API search results
+  const [results, setResults] = useState([]);
+  // Searching status
+  const [isSearching, setIsSearching] = useState(false);
+  // Debounce search term so that it only gives us latest value
+  const debouncedSearchTerm = useDebounce(searchItem, 500);
 
-  useEffect(() => {
-    fetchMovies(searchItem);
-  }, [searchItem]);
+  // Effect for API call
+  useEffect(
+    () => {
+      if (debouncedSearchTerm) {
+        setIsSearching(true);
+        setIsLoading(true);
+        fetchMovies(debouncedSearchTerm).then((data) => {
+          setIsSearching(false);
+          setResults(data);
+        });
+      } else {
+        setResults([]);
+        setIsSearching(false);
+        setIsLoading(false);
+      }
+    },
+    [debouncedSearchTerm] // Only call effect if debounced search term changes
+  );
+
+  // useEffect(() => {
+  //   fetchMovies(searchItem);
+  // }, [searchItem]);
 
   useEffect(() => {
     const moviesNominated = JSON.parse(localStorage.getItem('shoppies-movies'));
@@ -30,19 +57,6 @@ const App = () => {
   const saveLocalStorage = (items) => {
     localStorage.setItem('shoppies-movies', JSON.stringify(items));
   };
-
-  // ORIGINAL REQUEST
-  // const fetchMovies = async (searchItem) => {
-  //   const url = `https://www.omdbapi.com/?s=${searchItem}&apikey=${process.env.REACT_APP_MOVIE_API_KEY}`;
-
-  //   const response = await fetch(url);
-  //   const data = await response.json();
-
-  //   if (data.Search) {
-  //     console.log(data);
-  //     setMovies(data.Search);
-  //   }
-  // };
 
   // Fetch movie data
   const fetchMovies = async (searchItem) => {
@@ -62,6 +76,7 @@ const App = () => {
     if (data.Search) {
       setMovies(data.Search);
     }
+    console.log(data);
   };
 
   // Nominate a movie
@@ -91,6 +106,7 @@ const App = () => {
 
   // Reset when Restart button is clicked
   const handleReset = () => {
+    setIsLoading(false);
     setMovies([]);
     setNominate([]);
     setSearchItem('');
@@ -145,11 +161,11 @@ const App = () => {
             nominateComponent={NominateButtonComponent}
             isNominated={isNominated}
             setIsNominated={setIsNominated}
+            isLoading={isLoading}
           />
         </div>
 
         <div className={classes.Child2}>
-          {/* <MainHeading heading='Nominated Movies' /> */}
           <NominatedMovies
             movies={nominate}
             handleNominate={nominateMovie}

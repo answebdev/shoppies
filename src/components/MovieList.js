@@ -6,7 +6,7 @@ const MovieList = (props) => {
   // const NominateButtonComponent = props.nominateComponent;
   // const [isLoading, setIsLoading] = useState(false);
   // const [error, setError] = useState(false);
-  const [isLoading] = useState(false);
+  // const [isLoading] = useState(false);
   const [error] = useState(false);
 
   const { disableNominateButton } = props;
@@ -39,9 +39,9 @@ const MovieList = (props) => {
           </div>
         ))}
 
-        {!isLoading ? <div className='text-center'></div> : <Spinner />}
+        {!props.isLoading ? <div className='text-center'></div> : <Spinner />}
 
-        {!isLoading && error ? (
+        {!props.isLoading && error ? (
           <div>
             <p style={{ textAlign: 'center' }}>Oh, no. something went wrong!</p>
           </div>
