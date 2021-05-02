@@ -31,6 +31,7 @@ const App = () => {
         setIsLoading(true);
         fetchMovies(debouncedSearchTerm).then((data) => {
           setIsSearching(false);
+          setIsLoading(false);
           setResults(data);
         });
       } else {
