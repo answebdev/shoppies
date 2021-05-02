@@ -77,7 +77,7 @@ const App = () => {
     if (data.Search) {
       setMovies(data.Search);
     }
-    console.log(data);
+    // console.log(data);
   };
 
   // Nominate a movie
