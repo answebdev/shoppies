@@ -28,7 +28,7 @@ const Input = (props) => {
           disabled
           className={classes.Input}
           placeholder='Search movie titles'
-          value={props.value}
+          value={props.searchItem}
           onChange={(e) => props.setSearchItem(e.target.value)}
         ></input>
       ) : (
@@ -36,7 +36,7 @@ const Input = (props) => {
           type='text'
           className={classes.Input}
           placeholder='Search movie titles'
-          value={props.value}
+          value={props.searchItem}
           onChange={(e) => props.setSearchItem(e.target.value)}
         ></input>
       )}
