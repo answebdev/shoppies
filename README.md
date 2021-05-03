@@ -20,7 +20,7 @@ Please check out the live link for The Shoppies here: [The Shoppies](https://the
 
 ## The Challenge
 
-Create a webpage that can search [OMDB](http://www.omdbapi.com/ "OMDB") for movies, and allow the user to save their favorite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
+Create a webpage that can search [OMDB](http://www.omdbapi.com/ "OMDB") for movies, and allow users to save their favorite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
 
 ### Requirements
 
