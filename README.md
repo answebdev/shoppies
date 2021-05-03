@@ -1,4 +1,4 @@
-# Lucky Student
+# The Shoppies
 
 # Project Description
 
