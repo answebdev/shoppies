@@ -33,9 +33,7 @@ button {
 /* MEDIA QUERIES */
 @media (max-width: 1024px) {
   .BigChild {
-    /* background-color: yellow; */
     flex-direction: column;
-    /* flex-direction: column-reverse; */
     gap: 1;
   }
 
