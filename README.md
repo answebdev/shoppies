@@ -65,7 +65,7 @@ In terms of developing the application, I decided to build the app using React a
 * Local Storage
 * React Transition Group
 * Animista
-* CSS
+* CSS (CSS Modules)
 * Flexbox
 * SweetAlert2
 * Google Fonts
