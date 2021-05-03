@@ -4,12 +4,8 @@
 
 The Shoppies is a movie nomination application created as part of the application process for the Shopify Fall 2021 Frontend Developer Internship. This app allows users to search for films and save their favorite films that they feel should be up for nomination. When they have selected 5 nominees, they should be notified that they are finished.
 
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
+Table
+Screenshots [I'm a reference-style link][Screenshots]
 
 # Technologies Used
 
