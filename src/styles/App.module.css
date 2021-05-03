@@ -44,7 +44,7 @@ button {
   }
 
   .LogoImg {
-    width: 35%;
+    width: 40%;
     height: auto;
   }
 }
@@ -61,7 +61,7 @@ button {
   }
 
   .LogoImg {
-    width: 35%;
+    width: 50%;
     height: auto;
   }
 }
@@ -78,7 +78,7 @@ button {
   }
 
   .LogoImg {
-    width: 45%;
+    width: 60%;
     height: auto;
   }
 }
@@ -95,7 +95,7 @@ button {
   }
 
   .LogoImg {
-    width: 45%;
+    width: 75%;
     height: auto;
   }
 }
@@ -112,7 +112,7 @@ button {
   }
 
   .LogoImg {
-    width: 50%;
+    width: 100%;
     height: auto;
   }
 }
