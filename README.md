@@ -119,7 +119,7 @@ When the user has selected all 5 movie nominations, and decides to reset the app
 
 ### Loading Spinner
 
-A separate spinner component was created to let the user know that something is happening if the API does not respond right away.
+A separate spinner component was created to let the user know that something is happening if the API does not respond right away. A gif is used for the spinner.
 
 ```
 import React from 'react';
