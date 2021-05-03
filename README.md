@@ -54,7 +54,7 @@ For the design, I wanted to keep it within family of the existing brand. That wa
 
 ### Development
 
-In terms of developing the application, I decided to build the app using React and CSS Modules. I decided to use pure CSS, instead of using frameworks, and used Flexbox and media queries to create an application that would be responsive on both desktop and mobile devices. To provide a better user experience, I used minimal animations from React Transition Group and Animista.
+In terms of developing the application, I decided to build the app using React and CSS Modules. I decided to use pure CSS, instead of using frameworks, and used Flexbox and media queries to create an application that would be responsive on both desktop and mobile devices. To provide a better user experience, I used minimal animations from [React Transition Group](http://reactcommunity.org/react-transition-group/ "React Transition Group") and [Animista](https://animista.net/ "Animista").
 
 [Back To Top](#Table-of-Contents)
 
