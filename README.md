@@ -90,17 +90,9 @@ In comparison, you can see the improvement in the Network tab when debouncing is
 The provide for a better user experience, movies that are nominated by a user are stored in local storage, so that the nominated movies are preserved in local storage whether they are nominated and added to the Nominations list, or removed from the list. That way, when a user refreshes the page, the information is not lost.
 
 ```
-const App = () => {
-  return (
-    <div>
-    	<Password
-        buttonFont="'Quicksand', sans-serif"
-        buttonColor="orange"
-        buttonTextColor="#000000"
-        inputFont="'Quicksand', sans-serif"
-      />
-    </div>
-  );
-};
-
-export
+  // Save nominated movies to local storage
+  const saveLocalStorage = (items) => {
+    localStorage.setItem('shoppies-movies', JSON.stringify(items));
+  };
+```
+as new
