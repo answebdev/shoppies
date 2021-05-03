@@ -1,10 +1,37 @@
-# Lucky Student
+# The Shoppies
 
-# Project Description
+## Project Description
 
-Lucky Student is a full-stack MERN application that can be used in the classroom, and that allows teachers to select a student at random with the click of a button from their class roster. There are various ways for teachers to elicit responses from students in the classroom, such as calling on particular students by name, eliciting a response from the class as a whole, etc. Lucky Student is a tool can change things up in the classroom by displaying it on a screen and leaving it up to chance. Students get a kick out of wondering who will be called on next to answer questions. To use the app, users create an account and log in to add and save students to their roster. Names can also be edited and deleted. After users have added students to their roster, they can use the Generator feature to select a student at random with the click of a button. Lucky Student has complete CRUD functionality, as users can add and see the students, as well as edit and delete them.
+The Shoppies is a movie nomination application created as part of the application process for the Shopify Fall 2021 Frontend Developer Internship. This app allows users to search for films and save their favorite films that they feel should be up for nomination. When they have selected 5 nominees, they should be notified that they are finished.
 
-A complete backend API was built in order to interact with React, along with the use of React hooks. JSON Web tokens are used for authentication, and there is also validation, so if a user tries to register an email that is already taken, the user will get an alert saying that the user already exists. Both user and student names are stored in the MongoDB Atlas database. Other features include React Transition Group for fade animations, Font Awesome for the icons, a spinner GIF that is displayed when a page is loading, the use of SweetAlert instead of the default JavaScript alert message (see screen shot #5 below), the use of Open Graph meta tags to control how the application's URL is displayed when shared on social media (see screenshot #7 below), and more. The font used ('Raleway') comes from Google Fonts. The favicon was created on Canva. The animated effects come from Animate.css. Finally, a custom CSS file is used.
+## Table of Contents
+* [The Challenge](#The-Challenge)
+* [Screenshots](#Screenshots)
+* Express
+
+## The Challenge
+
+Create a webpage that can search OMDB for movies, and allow the user to save their favorite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
+
+### Requirements
+
+* Simple to use interface
+* Search OMDB's API and display the results (movies only)
+* Add a movie from the search results to the nomination list
+*	View the list of films already nominated
+*	Remove a nominee from the nomination list
+*	Each search result should list at least its title, year of release, and a button to nominate that film
+*	Updates to the search terms should update the result list
+*	If a search result has already been nominated, disable its nominate button
+*	Display a banner when the user has 5 nominations
+
+### Extras
+
+Improvements to design and functionality are allowed. Crafting a nicer design, or improving the app by adding new features can be added to best showcase your passion and skills.
+
+[Back To Top](#Table-of-Contents)
+
+
 
 # Technologies Used
 
