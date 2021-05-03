@@ -84,3 +84,23 @@ To prevent API calls from being fired on every keystroke, I used a debounce cust
 In comparison, you can see the improvement in the Network tab when debouncing is used. As you can see, although the same API call is being made (i.e., searching for "harry potter"), the API calls are not executed as frequently as when debouncing is not used. Instead of making API calls with every keystroke, the debounce hook forces the function that is fetching the data to wait a certain amount of time (500ms) before running again. The hook, then, limits the number of times the function is called. As you can see in the Network tab in the example below, this is much more efficient.
 
 ![Screenshot 04](screenshots/withDebounce.gif "With Debouncing")
+
+### Local Storage
+
+The provide for a better user experience, movies that are nominated by a user are stored in local storage, so that the nominated movies are preserved in local storage whether they are nominated and added to the Nominations list, or removed from the list. That way, when a user refreshes the page, the information is not lost.
+
+```
+const App = () => {
+  return (
+    <div>
+    	<Password
+        buttonFont="'Quicksand', sans-serif"
+        buttonColor="orange"
+        buttonTextColor="#000000"
+        inputFont="'Quicksand', sans-serif"
+      />
+    </div>
+  );
+};
+
+export
