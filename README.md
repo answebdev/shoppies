@@ -75,7 +75,7 @@ In terms of developing the application, I decided to build the app using React a
 
 # Screenshots
 
-![Screenshot 02](screenshots/the-shoppies-screenshot02.png "The Shoppies App")
+![Screenshot 02](screenshots/the-shoppies-screenshot.png "The Shoppies App")
 
 ![Screenshot 03](screenshots/withoutDebounce.gif "Without Debouncing")
 
