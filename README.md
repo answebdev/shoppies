@@ -1,5 +1,7 @@
 # The Shoppies
 
+![Screenshot 01](screenshots/the-shoppies-demo.gif "The Shoppies Demo")
+
 ## Project Description
 
 The Shoppies is a movie nomination application created as part of the application process for the Shopify Fall 2021 Frontend Developer Internship. This app allows users to search for films and save their favorite films that they feel should be up for nomination. When they have selected 5 nominees, they should be notified that they are finished.
@@ -12,8 +14,7 @@ Please check out the live link for The Shoppies here: [The Shoppies](https://the
 * [The Challenge](#The-Challenge)
 * [My Approach](#My-Approach)
 * [Technologies Used](#Technologies-Used)
-* [Screenshots](#Screenshots)
-* Express
+* [Extra Features](#Extra-Features)
 
 ## The Challenge
 
@@ -35,7 +36,7 @@ Create a webpage that can search OMDB for movies, and allow the user to save the
 
 Improvements to design and functionality are allowed. Crafting a nicer design, or improving the app by adding new features can be added to best showcase your passion and skills. The following image was provided as a reference:
 
-![Screenshot 01](screenshots/reference-image-screenshot01.png "Reference Image")
+![Screenshot 02](screenshots/reference-image-screenshot.png "Reference Image")
 
 [Back To Top](#Table-of-Contents)
 
@@ -55,7 +56,7 @@ In terms of developing the application, I decided to build the app using React a
 
 [Back To Top](#Table-of-Contents)
 
-# Technologies Used
+## Technologies Used
 
 * React (Hooks)
 * OMDB API
@@ -72,9 +73,11 @@ In terms of developing the application, I decided to build the app using React a
 
 [Back To Top](#Table-of-Contents)
 
-# Screenshots
+## Extra Features
 
-![Screenshot 02](screenshots/the-shoppies-screenshot02.png "The Shoppies App")
+### Debounce
+
+To prevent API calls from being fired on every keystroke, I used a debounce custom hook in conjunction with useEffect to delay the API call until the user finished typing. This ensures that expensive operations, as in the API calls here, are not executed too frequently. The improvement can be seen when looking at the Network tab in the console when making the API calls. In this first example, debouncing is not used. As you can see, API calls are being made with every keystroke. This can be clearly seen in the network tab. In addition to causing issues with performance, having new information appear with every keystroke can be chaotic and inefficient.
 
 ![Screenshot 03](screenshots/withoutDebounce.gif "Without Debouncing")
 
