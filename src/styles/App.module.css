@@ -103,6 +103,7 @@ button {
 @media (max-width: 280px) {
   .BigChild {
     /* background-color: pink; */
+
     flex-direction: column;
     gap: 1;
   }
