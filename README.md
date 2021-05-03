@@ -54,7 +54,7 @@ For the design, I wanted to keep it within the family of the existing brand. Tha
 
 ### Development
 
-In terms of developing the application, I decided to build the app using React and CSS Modules. I decided to use pure CSS, instead of using frameworks, and used Flexbox and media queries to create an application that would be responsive on both desktop and mobile devices. To provide a better user experience, I used minimal animations from [React Transition Group](http://reactcommunity.org/react-transition-group/ "React Transition Group") and [Animista](https://animista.net/ "Animista").
+In terms of developing the application, I decided to build the app using React and CSS Modules. I decided to use pure CSS, instead of using frameworks, and used Flexbox and media queries to create an application that would be responsive on both desktop and mobile devices. To provide a better user experience, I used animations from [React Transition Group](http://reactcommunity.org/react-transition-group/ "React Transition Group") and [Animista](https://animista.net/ "Animista"). I used React Transition Group for the fade in and fade out effect when adding and removing movies. Animista was used on the IMDB image logo on the nominated movie cards to provide a nice pulsating effect when the nominated movie card is added.
 
 [Back To Top](#Table-of-Contents)
 
