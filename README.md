@@ -1,6 +1,6 @@
 # The Shoppies
 
-![Screenshot 01](screenshots/the-shoppies-demo3.gif "The Shoppies Demo")
+![Screenshot 01](screenshots/the-shoppies-demo.gif "The Shoppies Demo")
 
 ## Project Description
 
@@ -79,13 +79,13 @@ In terms of developing the application, I decided to build the app using React a
 
 ### Debounce
 
-To prevent API calls from being fired on every keystroke, I a debounce custom hook is used in conjunction with useEffect to delay the API call until the user finishes typing. This ensures that expensive operations, as in the API calls here, are not executed too frequently. The improvement can be seen when looking at the Network tab in the console when making the API calls. In this first example, debouncing is not used. As you can see, API calls are being made with every keystroke. This can be clearly seen in the network tab. In addition to causing issues with performance, having new information appear with every keystroke can be chaotic and inefficient.
+To prevent API calls from being fired on every keystroke, a debounce custom hook is used in conjunction with useEffect to delay the API call until the user finishes typing. This ensures that expensive operations, as in the API calls here, are not executed too frequently. The improvement can be seen when looking at the Network tab in the console when making the API calls. In this first example, debouncing is not used. As you can see, API calls are being made with every keystroke. This can be clearly seen in the network tab. In addition to causing issues with performance, having new information appear with every keystroke can be chaotic and inefficient.
 
-![Screenshot 03](screenshots/withoutDebounce2.gif "Without Debouncing")
+![Screenshot 03](screenshots/withoutDebounce.gif "Without Debouncing")
 
 In comparison, you can see the improvement in the Network tab when debouncing is used. As you can see, although the same API call is being made (i.e., searching for "harry potter"), the API calls are not executed as frequently as when debouncing is not used. Instead of making API calls with every keystroke, the debounce hook forces the function that is fetching the data to wait a certain amount of time (500ms) before running again. The hook, then, limits the number of times the function is called. As you can see in the Network tab in the example below, this is much more efficient.
 
-![Screenshot 04](screenshots/withDebounce2.gif "With Debouncing")
+![Screenshot 04](screenshots/withDebounce.gif "With Debouncing")
 
 ### Local Storage
 
