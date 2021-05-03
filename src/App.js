@@ -17,9 +17,9 @@ const App = () => {
   const [isNominated, setIsNominated] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   // API search results
-  const [results, setResults] = useState([]);
+  const [, setResults] = useState([]);
   // Searching status
-  const [isSearching, setIsSearching] = useState(false);
+  const [, setIsSearching] = useState(false);
   // Debounce search term so that it only gives us latest value
   const debouncedSearchTerm = useDebounce(searchItem, 500);
 
