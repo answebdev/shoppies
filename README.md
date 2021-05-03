@@ -160,7 +160,7 @@ Facebook Crawler from the Facebook Developer Tools suite was used to crawl the l
 
 ## Future Additions
 
-* Currently, when all movies are deleted from the Nominations list, the last movie card that is deleted momentarily jumps up to the place where the "Nominations" text was rendered. As a result, the fading away card is momentarily not in alignment with the searched movie cards on the left, which are not removed. Though minor, this is an issue that I would like to address.
+* Currently, when all movies are deleted from the Nominations list, the last movie card that is deleted momentarily jumps up to the place where the "Nominations" text was rendered. As a result, the fading away card is momentarily not in alignment with the searched movie cards on the left, which are not removed. Though minor, this is an issue that I would like to address in the future.
 * Winner Feature: I would like to add a feature where after the user has nominated 5 movies, the user would be able to pick a winning movie and display it on a separate page.
 
 [Back To Top](#Table-of-Contents)
