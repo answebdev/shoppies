@@ -6,7 +6,6 @@ const ResultsHeader = (props) => {
     <div>
       <div>
         <p className={classes.ResultsLeadText}>
-          {/* <strong>Movie results for:</strong> {props.searchItem} */}
           {props.searchItem.length > 0 ? (
             <strong>Movie results for:</strong>
           ) : null}

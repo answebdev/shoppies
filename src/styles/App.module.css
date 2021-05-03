@@ -2,10 +2,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  /* justify-content: space-between; */
   align-items: center;
   gap: 4em;
-  /* align-content: stretch; */
 }
 
 .BigChild {
@@ -49,7 +47,6 @@ button {
 
 @media (max-width: 768px) {
   .BigChild {
-    /* background-color: blue; */
     flex-direction: column;
     gap: 1;
   }
@@ -66,7 +63,6 @@ button {
 
 @media (max-width: 750px) {
   .BigChild {
-    /* background-color: steelblue; */
     flex-direction: column;
     gap: 1;
   }
@@ -83,7 +79,6 @@ button {
 
 @media (max-width: 376px) {
   .BigChild {
-    /* background-color: green; */
     flex-direction: column;
     gap: 1;
   }
@@ -100,8 +95,6 @@ button {
 
 @media (max-width: 280px) {
   .BigChild {
-    /* background-color: pink; */
-
     flex-direction: column;
     gap: 1;
   }

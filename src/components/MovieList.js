@@ -3,10 +3,6 @@ import Spinner from './misc/Spinner';
 import classes from '../styles/MovieList.module.css';
 
 const MovieList = (props) => {
-  // const NominateButtonComponent = props.nominateComponent;
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [error, setError] = useState(false);
-  // const [isLoading] = useState(false);
   const [error] = useState(false);
 
   const { disableNominateButton } = props;
@@ -30,10 +26,6 @@ const MovieList = (props) => {
                     Nominate
                   </button>
                 </div>
-
-                {/* <div>
-                  {!movie && !isLoading ? <div>Movie not found</div> : null}
-                </div> */}
               </div>
             </div>
           </div>

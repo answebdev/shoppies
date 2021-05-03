@@ -20,7 +20,7 @@ const App = () => {
   const [, setResults] = useState([]);
   // Searching status
   const [, setIsSearching] = useState(false);
-  // Debounce search term so that it only gives us latest value
+  // Debounce search term so that it only gives us the latest value
   const debouncedSearchTerm = useDebounce(searchItem, 500);
 
   // Effect for API call
@@ -43,10 +43,7 @@ const App = () => {
     [debouncedSearchTerm] // Only call effect if debounced search term changes
   );
 
-  // useEffect(() => {
-  //   fetchMovies(searchItem);
-  // }, [searchItem]);
-
+  // Get from local storage when app first loads
   useEffect(() => {
     const moviesNominated = JSON.parse(localStorage.getItem('shoppies-movies'));
     if (moviesNominated) {
@@ -77,7 +74,6 @@ const App = () => {
     if (data.Search) {
       setMovies(data.Search);
     }
-    // console.log(data);
   };
 
   // Nominate a movie
@@ -97,7 +93,7 @@ const App = () => {
     saveLocalStorage(nominatedMovieList);
   };
 
-  // Disable Nominate button(s) after clicking or after 5 movies have been nominated
+  // Disable Nominate button(s) after clicking, or after 5 movies have been nominated
   const disableNominateButton = (movieId) => {
     return (
       nominate.length === 5 ||
