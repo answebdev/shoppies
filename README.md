@@ -16,11 +16,10 @@ Create a webpage that can search OMDB for movies, and allow the user to save the
 ## Requirements
 
 * Simple to use interface
-* Search OMDB and display the results (movies only)
+* Search OMDB's API and display the results (movies only)
 * Add a movie from the search results to the nomination list
 *	View the list of films already nominated
 *	Remove a nominee from the nomination list
-*	Search results should come from OMDB's API
 *	Each search result should list at least its title, year of release, and a button to nominate that film
 *	Updates to the search terms should update the result list
 *	Movies in search results can be added and removed from the nomination list
