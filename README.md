@@ -7,6 +7,7 @@ The Shoppies is a movie nomination application created as part of the applicatio
 ## Table of Contents
 * [The Challenge](#The-Challenge)
 * [My Approach](#My-Approach)
+* [Technologies Used](#Technologies-Used)
 * [Screenshots](#Screenshots)
 * Express
 
@@ -48,27 +49,28 @@ For the design, I wanted to keep it within family of the existing brand. That wa
 
 In terms of developing the application, I decided to build the app using React and CSS Modules. I decided to use pure CSS, instead of using frameworks, and used Flexbox and media queries to create an application that would be responsive on both desktop and mobile devices. To provide a better user experience, I used minimal animations from React Transition Group and Animista.
 
+[Back To Top](#Table-of-Contents)
+
 # Technologies Used
 
-* MongoDB
-* Express
-* React
-* Node
-* NPM packages: Axios, React Router, React Transition Group, React Helmet, bcryptjs, UUID, Express-Validator, Mongoose, Rebass, and SweetAlert
-* Animate.css
+* React (Hooks)
+* OMDB API
+* Flexbox
+* Local Storage
+* React Transition Group
+* Animista
 * CSS
-* Font Awesome
+* SweetAlert2
 * Google Fonts
+* Netlify
 
-# Lucky Student Live Link
+# The Shoppies Live Link
 
 Please check out the live link for Lucky Student here:
 
-https://lucky-student.com/
+https://the-shoppies-priceless-kare.netlify.app/
 
-# Lucky Student Demo Video
-
-To learn how to use Lucky Student, watch the [demo video](https://drive.google.com/file/d/17FBhEFrC3Xtjt-E-yz6EzhT0A5T-NbPU/view).
+[Back To Top](#Table-of-Contents)
 
 # Screenshots
 
