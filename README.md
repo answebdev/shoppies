@@ -66,6 +66,8 @@ In terms of developing the application, I decided to build the app using React a
 * CSS
 * SweetAlert2
 * Google Fonts
+* Facebook Developer Tools (Sharing Debugger)
+* Canva
 * Netlify
 
 [Back To Top](#Table-of-Contents)
