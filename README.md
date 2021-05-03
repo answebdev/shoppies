@@ -1,6 +1,6 @@
 # The Shoppies
 
-![Screenshot 01](screenshots/the-shoppies-demo.gif "The Shoppies Demo")
+![Screenshot 01](screenshots/the-shoppies-demo2.gif "The Shoppies Demo")
 
 ## Project Description
 
