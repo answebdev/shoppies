@@ -107,7 +107,7 @@ In this code snippet, nominated movies are saved to local storage. In order to r
     localStorage.setItem('shoppies-movies', JSON.stringify(items));
   };
 ```
-When the user has selected all 5 movie nominations, and decides to reset the app, all of the movies that were stored in local storage will no longer be in local storage. As you can see from the handleRest function, which resets the app, saveLocalStorage is set to an empty string, clearing everything from local storage.
+When the user has selected all 5 movie nominations, and decides to restart the app, all of the movies that were stored in local storage will no longer be in local storage. As you can see from the handleRest function, which resets the app, saveLocalStorage is set to an empty string, clearing everything from local storage.
 
 ```
   // Reset when Restart button is clicked
