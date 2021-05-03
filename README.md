@@ -27,11 +27,11 @@ Create a webpage that can search OMDB for movies, and allow the user to save the
 
 ### Extras
 
-Improvements to design and functionality are allowed. Crafting a nicer design, or improving the app by adding new features can be added to best showcase your passion and skills.
+Improvements to design and functionality are allowed. Crafting a nicer design, or improving the app by adding new features can be added to best showcase your passion and skills. The following image was provided as a reference:
+
+![Screenshot 01](screenshots/reference-image-screenshot01.png "Reference Image")
 
 [Back To Top](#Table-of-Contents)
-
-
 
 # Technologies Used
 
@@ -57,8 +57,8 @@ To learn how to use Lucky Student, watch the [demo video](https://drive.google.c
 
 # Screenshots
 
-![Screenshot 01](screenshots/the-shoppies-screenshot01.png "The Shoppies App")
+![Screenshot 02](screenshots/the-shoppies-screenshot02.png "The Shoppies App")
 
-![Screenshot 02](screenshots/withoutDebounce.gif "Without Debouncing")
+![Screenshot 03](screenshots/withoutDebounce.gif "Without Debouncing")
 
-![Screenshot 02](screenshots/withDebounce.gif "With Debouncing")
+![Screenshot 04](screenshots/withDebounce.gif "With Debouncing")
