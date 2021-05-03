@@ -150,6 +150,12 @@ Nominated movies allow the user to open the movie page on the IMDB website in a 
 
 [Back To Top](#Table-of-Contents)
 
+### Facebook Crawler
+
+Facebook Crawler from the Facebook Developer Tools suite was used to crawl the hosted application. Doing this allows one to see the information that is used when the application content is shared on Facebook, Messenger and other places. Open Graph markup was done in the `index.html` file, which allowed me to customize how the application's URL and information is displayed when shared and posted on social media.
+
+![Screenshot 06](screenshots/open-graph.png "The Shoppies Shared on Social Media")
+
 ## Future Additions
 
 * Currently, when all movies are deleted from the Nominations list, the last movie card that is deleted momentarily jumps up to the place where the "Nominations" text was rendered. As a result, the fading away card is momentarily not in alignment with the searched movie cards on the left, which are not removed. Though minor, this is an issue that I would like to address.
