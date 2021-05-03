@@ -4,6 +4,10 @@
 
 The Shoppies is a movie nomination application created as part of the application process for the Shopify Fall 2021 Frontend Developer Internship. This app allows users to search for films and save their favorite films that they feel should be up for nomination. When they have selected 5 nominees, they should be notified that they are finished.
 
+## The Shoppies Live Link
+
+Please check out the live link for The Shoppies here: [The Shoppies](https://the-shoppies-priceless-kare.netlify.app/ "The Shoppies")
+
 ## Table of Contents
 * [The Challenge](#The-Challenge)
 * [My Approach](#My-Approach)
@@ -63,12 +67,6 @@ In terms of developing the application, I decided to build the app using React a
 * SweetAlert2
 * Google Fonts
 * Netlify
-
-# The Shoppies Live Link
-
-Please check out the live link for Lucky Student here:
-
-https://the-shoppies-priceless-kare.netlify.app/
 
 [Back To Top](#Table-of-Contents)
 
