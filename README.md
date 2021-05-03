@@ -144,7 +144,7 @@ This spinner component is then used in the MovieList component, for example, to 
 
 ### IMDB Links
 
-Nominated movies allow the user to open the movie page on the IMDB website in a separate tab. To do this, I used the IMDB logo image that the user can click on to open the page. This was done by taking the IMDB ID (`imdbID`) and adding it dynamically to the `a href` attribute for each movie.
+Nominated movies allow the user to open the movie page on the IMDB website in a separate tab. To do this, I used the IMDB logo image that the user can click on to open the page. This was done by taking the IMDB ID (`imdbID`) and adding it dynamically to the `a href` so that the user could go to the IMDB page for each movie clicked on.
 
 ![Screenshot 05](screenshots/imdb-link.png "Link to IMDB Page")
 
