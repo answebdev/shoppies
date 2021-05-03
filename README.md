@@ -94,6 +94,7 @@ The provide for a better user experience, movies that are nominated by a user ar
 In this code snippet, nominated movies are saved to local storage. In order to retrieve the movies stored in local storage whenver the app loads, the useEffect Hook is a good place to do this, since the useEffect Hook always runs when the app loads for the first time. Although not shown in the snippet below, using local storage also ensures that nominated movies that are removed from the list no longer remain in local storage.
 
 ```
+  // Get from local storage when app first loads
   useEffect(() => {
     const moviesNominated = JSON.parse(localStorage.getItem('shoppies-movies'));
     if (moviesNominated) {
