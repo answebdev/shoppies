@@ -15,6 +15,7 @@ Please check out the live link for The Shoppies here: [The Shoppies](https://the
 * [My Approach](#My-Approach)
 * [Technologies Used](#Technologies-Used)
 * [Extra Features](#Extra-Features)
+* [Future Additions](#Future-Additions)
 
 ## The Challenge
 
@@ -140,4 +141,16 @@ This spinner component is then used in the MovieList component, for example, to 
 ```
 {!props.isLoading ? <div className='text-center'></div> : <Spinner />}
 ```
+
+### IMDB Links
+
+Nominated movies allow the user to open the movie page on the IMDB website in a separate tab. To do this, I used the IMDB logo image that the user can click on to open the page.
+
+![Screenshot 05](screenshots/imdb-link.png "Link to IMDB Page")
+
 [Back To Top](#Table-of-Contents)
+
+## Future Additions
+
+* Currently, when all movies are deleted from the Nominations list, the last movie card that is deleted momentarily jumps up to the place where the "Nominations" text was rendered. As a result, the fading away card is momentarily not in alignment with the searched movie cards on the left, which are not removed. Though minor, this is an issue that I would like to address.
+* Winner Feature: I would like to add a feature where after the user has nominated 5 movies, the user would be able to pick a winning movie and display it on a separate page.
