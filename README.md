@@ -77,7 +77,7 @@ In terms of developing the application, I decided to build the app using React a
 
 ### Debounce
 
-To prevent API calls from being fired on every keystroke, I used a debounce custom hook in conjunction with useEffect to delay the API call until the user finished typing. This ensures that expensive operations, as in the API calls here, are not executed too frequently. The improvement can be seen when looking at the Network tab in the console when making the API calls. In this first example, debouncing is not used. As you can see, API calls are being made with every keystroke. This can be clearly seen in the network tab. In addition to causing issues with performance, having new information appear with every keystroke can be chaotic and inefficient.
+To prevent API calls from being fired on every keystroke, I a debounce custom hook is used in conjunction with useEffect to delay the API call until the user finished typing. This ensures that expensive operations, as in the API calls here, are not executed too frequently. The improvement can be seen when looking at the Network tab in the console when making the API calls. In this first example, debouncing is not used. As you can see, API calls are being made with every keystroke. This can be clearly seen in the network tab. In addition to causing issues with performance, having new information appear with every keystroke can be chaotic and inefficient.
 
 ![Screenshot 03](screenshots/withoutDebounce.gif "Without Debouncing")
 
@@ -116,3 +116,28 @@ When the user has selected all 5 movie nominations, and decides to reset the app
     saveLocalStorage('');
   };
   ```
+
+### Loading Spinner
+
+A separate spinner component was created to let the user know that something is happening if the API does not respond right away.
+
+```
+import React from 'react';
+import spinner from '../../img/spinner.gif';
+
+const Spinner = () => (
+  <img
+    src={spinner}
+    alt='Loading...'
+    style={{ width: '35px', height: 'auto', margin: 'auto', display: 'block' }}
+  />
+);
+
+export default Spinner;
+```
+
+This spinner component is then used in the MovieList component, for example, to show the user that the movie that has been typed in is being searched for if the API does not respond immediately.
+```
+{!props.isLoading ? <div className='text-center'></div> : <Spinner />}
+```
+[Back To Top](#Table-of-Contents)
