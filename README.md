@@ -13,7 +13,7 @@ The Shoppies is a movie nomination application created as part of the applicatio
 
 Create a webpage that can search OMDB for movies, and allow the user to save their favorite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
 
-## Requirements
+### Requirements
 
 * Simple to use interface
 * Search OMDB's API and display the results (movies only)
@@ -25,7 +25,7 @@ Create a webpage that can search OMDB for movies, and allow the user to save the
 *	If a search result has already been nominated, disable its nominate button
 *	Display a banner when the user has 5 nominations
 
-## Extras
+### Extras
 
 Improvements to design and functionality are allowed. Crafting a nicer design, or improving the app by adding new features can be added to best showcase your passion and skills.
 
