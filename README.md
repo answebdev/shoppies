@@ -62,11 +62,11 @@ In terms of developing the application, I decided to build the app using React a
 
 * React (Hooks)
 * OMDB API
-* Flexbox
 * Local Storage
 * React Transition Group
 * Animista
 * CSS
+* Flexbox
 * SweetAlert2
 * Google Fonts
 * Facebook Developer Tools (Sharing Debugger)
