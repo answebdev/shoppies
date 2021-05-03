@@ -16,6 +16,7 @@ Please check out the live link for The Shoppies here: [The Shoppies](https://the
 * [Technologies Used](#Technologies-Used)
 * [Extra Features](#Extra-Features)
 * [Future Additions](#Future-Additions)
+* [Screenshots](#Screenshots)
 
 ## The Challenge
 
@@ -160,5 +161,13 @@ Facebook Crawler from the Facebook Developer Tools suite was used to crawl the h
 
 * Currently, when all movies are deleted from the Nominations list, the last movie card that is deleted momentarily jumps up to the place where the "Nominations" text was rendered. As a result, the fading away card is momentarily not in alignment with the searched movie cards on the left, which are not removed. Though minor, this is an issue that I would like to address.
 * Winner Feature: I would like to add a feature where after the user has nominated 5 movies, the user would be able to pick a winning movie and display it on a separate page.
+
+[Back To Top](#Table-of-Contents)
+
+## Screenshots
+
+![Screenshot 07](screenshots/the-shoppies-screenshot.png "The Shoppies")
+
+![Screenshot 08](screenshots/great-picks.png "Banner That Displays When 5 Movies Have Been Nominated")
 
 [Back To Top](#Table-of-Contents)
