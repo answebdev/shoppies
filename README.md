@@ -169,6 +169,8 @@ Facebook Crawler from the Facebook Developer Tools suite was used to crawl the l
 
 ![Screenshot 07](screenshots/the-shoppies-screenshot.png "The Shoppies")
 
-![Screenshot 08](screenshots/great-picks.png "Banner That Displays When 5 Movies Have Been Nominated")
+![Screenshot 08](screenshots/the-shoppies-search-screenshot.png "Search Results and Nominations List")
+
+![Screenshot 09](screenshots/great-picks.png "Banner That Displays When 5 Movies Have Been Nominated")
 
 [Back To Top](#Table-of-Contents)
