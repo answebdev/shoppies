@@ -92,7 +92,7 @@ In comparison, you can see the improvement in the Network tab when debouncing is
 
 To provide for a better user experience, movies that are nominated by a user are stored in local storage, so that the nominated movies are preserved in local storage when they are nominated and added to the Nominations list. Likewise, when movies are removed from the Nominations list, they will remain removed from the list when the page is refreshed. By adding local storage, the information is not lost when a user refreshes the page.
 
-In this code snippet, nominated movies are saved to local storage. In order to retrieve the movies stored in local storage whenever the app loads, the useEffect Hook is a good place to do this, since the useEffect Hook always runs when the app loads for the first time. Although not shown in the snippet below, using local storage also ensures that nominated movies that are removed from the list no longer remain in local storage.
+In this code snippet, nominated movies are saved to local storage. In order to retrieve the movies stored in local storage whenever the app loads, the useEffect Hook is a good place to do this, since the useEffect hook always runs when the app loads for the first time. Although not shown in the snippet below, using local storage also ensures that nominated movies that are removed from the list no longer remain in local storage.
 
 ```
   // Get from local storage when app first loads
