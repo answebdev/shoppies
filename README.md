@@ -138,7 +138,7 @@ const Spinner = () => (
 export default Spinner;
 ```
 
-This spinner component is then used in the MovieList component to show the user that the movie that has been typed in is being searched for if the API does not respond immediately.
+This spinner component is used in the MovieList component to show the user that the movie that has been typed in is being searched for if the API does not respond immediately.
 ```
 {!props.isLoading ? <div className='text-center'></div> : <Spinner />}
 ```
