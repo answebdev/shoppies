@@ -29,7 +29,7 @@ Create a webpage that can search [OMDB](http://www.omdbapi.com/ "OMDB") for movi
 *	View the list of films already nominated
 *	Remove a nominee from the nomination list
 *	Each search result should list at least its title, year of release, and a button to nominate that film
-*	Updates to the search terms should update the results list
+*	Updates to the search terms should update the search results list
 *	If a search result has already been nominated, disable its nominate button
 *	Display a banner when the user has 5 nominations
 
