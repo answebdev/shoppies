@@ -151,7 +151,7 @@ Nominated movies allow the user to open the movie page on the IMDB website in a 
 
 ### Facebook Crawler
 
-Facebook Crawler from the Facebook Developer Tools suite was used to crawl the live application. Doing this allows one to see the information that is used when the application content is shared on Facebook, Messenger and other places. Open Graph markup was done in the `index.html` file, which allowed me to customize how the application's URL and information is displayed when shared and posted on social media.
+Facebook Crawler from the Facebook Developer Tools suite was used to crawl the live application. Doing this allows one to see the information that is used when the application content is shared on Facebook, Messenger, and other places. Open Graph markup was done in the `index.html` file, which allowed me to customize how the application's URL and information is displayed when shared and posted on social media.
 
 ![Screenshot 06](screenshots/open-graph.png "The Shoppies Shared on Social Media")
 
