@@ -15,7 +15,6 @@ Please check out the live link for The Shoppies here: [The Shoppies](https://the
 * [My Approach](#My-Approach)
 * [Technologies Used](#Technologies-Used)
 * [Extra Features](#Extra-Features)
-* [Future Additions](#Future-Additions)
 * [Screenshots](#Screenshots)
 
 ## The Challenge
