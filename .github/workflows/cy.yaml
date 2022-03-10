@@ -4,12 +4,10 @@ jobs:
   cypress-run:
     runs-on: ubuntu-20.04
     steps:
-      - name: Sample Azure action
+      - name: Checkout
         uses: actions/checkout@v2
         with: # Set Azure credentials secret as an input
           credentials: ${{ secrets.CYPRESS_KEY }}
-      - name: Checkout
-        uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
