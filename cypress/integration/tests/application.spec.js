@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Second test suite - application', () => {
+describe('Application Test Suite', () => {
   it('visits the main page of the application', () => {
     cy.visit('/');
     cy.url().should('include', '/');
@@ -38,6 +38,9 @@ describe('Second test suite - application', () => {
 
     cy.log('Movies Nominated count should be 2');
     cy.get('[data-testid=movie-count]').should('have.text', '2');
+
+    cy.log('Checking that local storage works by reloading the page');
+    cy.reload();
   });
 
   it('searches for and nominates Jaws movies', () => {

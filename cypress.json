@@ -6,8 +6,5 @@
     ],
     "video": false,
     "viewportHeight": 1080,
-    "viewportWidth": 1920,
-    "env": {
-        "CYPRESS_KEY": ""
-    }
+    "viewportWidth": 1920
 }
