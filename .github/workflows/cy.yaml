@@ -10,3 +10,9 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v2
+steps:
+  - name: Cypress action
+    with: # Set Cypress credentials secret as an input
+      credentials: ${{ secrets.CYPRESS_KEY }}
+    env: # Or as an environment variable
+      credentials: ${{ secrets.CYPRESS_KEY }}
