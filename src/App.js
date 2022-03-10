@@ -114,8 +114,7 @@ const App = () => {
   const restart = () => {
     Swal.fire({
       title: 'Great Picks!',
-      text:
-        'You have reached the 5 film limit. Remove any film to select a new one, or click Restart to start over.',
+      text: 'You have reached the 5 film limit. Remove any film to select a new one, or click Restart to start over.',
       imageUrl:
         'https://1000logos.net/wp-content/uploads/2020/08/Shopify-Logo.jpg',
       imageWidth: 400,

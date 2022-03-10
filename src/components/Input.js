@@ -6,13 +6,13 @@ const Input = (props) => {
     <div>
       <div className={classes.TopBox}>
         <div className={classes.LeadTextDiv}>
-          <div className={classes.LeadText1}>
+          <div data-testid='lead-text' className={classes.LeadText1}>
             Nominate your
             <br />
             favorite movies.
           </div>
 
-          <div className={classes.LeadText2}>
+          <div data-testid='sub-lead-text' className={classes.LeadText2}>
             Search below to nominate
             <br />
             your top 5 favorite movies.
@@ -20,7 +20,8 @@ const Input = (props) => {
         </div>
 
         <div className={classes.LeadText3}>
-          <strong>Movies Nominated: </strong> {props.movies.length}/5
+          <strong>Movies Nominated: </strong>{' '}
+          <span data-testid='movie-count'>{props.movies.length}</span>/5
         </div>
       </div>
       {props.nominate.length === 5 ? (
@@ -33,6 +34,7 @@ const Input = (props) => {
         ></input>
       ) : (
         <input
+          data-testid='input'
           type='text'
           className={classes.Input}
           placeholder='Search movie titles'

@@ -19,6 +19,7 @@ const NominatedMovies = (props) => {
       <TransitionGroup>
         {props.movies.map((movie, index) => (
           <CSSTransition
+            data-testid='nominated-movies'
             key={movie.imdbID}
             timeout={props.movies.length === 5 ? 0 : 500}
             classNames={props.movies.length === 5 ? '' : 'item'}

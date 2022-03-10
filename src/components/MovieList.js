@@ -14,11 +14,12 @@ const MovieList = (props) => {
           <div key={index}>
             <div className={classes.MovieDiv}>
               <div className={classes.MovieCard}>
-                <div>
+                <div data-testid='movie-title-and-year'>
                   {movie.Title} • {movie.Year}
                 </div>
                 <div>
                   <button
+                    data-testid='nominate-btn'
                     className={classes.Button}
                     onClick={() => props.handleNominate(movie)}
                     disabled={disableNominateButton(movie.imdbID)}
