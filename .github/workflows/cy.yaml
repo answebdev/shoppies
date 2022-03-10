@@ -12,7 +12,5 @@ jobs:
         uses: cypress-io/github-action@v2
       - name: Cypress action
         uses: actions/checkout@v2
-        with: # Set Cypress credentials secret as an input
-          credentials: ${{ secrets.CYPRESS_KEY }}
         env: # Or as an environment variable
           credentials: ${{ secrets.CYPRESS_KEY }}
