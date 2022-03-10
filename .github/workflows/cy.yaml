@@ -6,8 +6,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with: # Set Azure credentials secret as an input
-          credentials: ${{ secrets.CYPRESS_KEY }}
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
