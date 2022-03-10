@@ -161,7 +161,7 @@ Facebook Crawler from the Facebook Developer Tools suite was used to crawl the l
 [Back To Top](#Table-of-Contents)
 
 ## E2E Testing
-I used Cypress for end-to-end testing to ensure that the application's complete workflow functions properly. All of the features of the application's workflow were tested, such as searching for movies and nominating movies, testing that local storage works by reloading the page, checking to see that the displayed movie count matches with the number of movies actually nominated, etc.
+I used Cypress for end-to-end testing to ensure that the application's complete workflow functions properly. All of the features of the application's workflow were tested, such as searching for movies and nominating movies, testing that local storage works by reloading the page, checking that the displayed Movies Nominated count matches the number of movies actually nominated, etc.
 
 In addition, I created a workflow using GitHub Actions to automate the testing so that the application always works as expected, which includes sending out notifications if any of the tests fail. I used both the `push` and `schedule` events. The `push` event is used so that the tests are run whenever any updates to the code are pushed to the respository to help ensure that nothing breaks unintentionally due to code changes. With the `schedule` event, the tests have been scheduled to run automatically once a week, also to help ensure that the application is always working as expected.
 
