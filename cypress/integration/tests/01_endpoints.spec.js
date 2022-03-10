@@ -7,7 +7,7 @@ describe('First test suite - endpoint', () => {
     cy.request({
       method: 'GET',
       url: `https://www.omdbapi.com/?s=jaws&apikey=${Cypress.env(
-        'REACT_APP_MOVIE_API_KEY'
+        'CYPRESS_KEY'
       )}`,
     }).should((response) => {
       cy.log(JSON.stringify(response.body));
