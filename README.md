@@ -1,4 +1,4 @@
-# The Shoppies 
+# The Shoppies [![End-to-end tests](https://github.com/answebdev/shoppies/actions/workflows/cy.yaml/badge.svg?branch=main)](https://github.com/answebdev/shoppies/actions/workflows/cy.yaml)
 
 ![Screenshot 01](screenshots/the-shoppies-demo.gif "The Shoppies Demo")
 
@@ -15,6 +15,7 @@ Please check out the live link for The Shoppies here: [The Shoppies](https://the
 * [My Approach](#My-Approach)
 * [Technologies Used](#Technologies-Used)
 * [Extra Features](#Extra-Features)
+* [E2E Testing](#E2E-Testing)
 * [Screenshots](#Screenshots)
 
 ## The Challenge
@@ -156,6 +157,15 @@ Nominated movies allow the user to open the movie page on the IMDB website in a 
 Facebook Crawler from the Facebook Developer Tools suite was used to crawl the live application. Doing this allows one to see the information that is used when the application content is shared on Facebook, Messenger, and other places. Open Graph markup was done in the `index.html` file, which allowed me to customize how the application's URL and information is displayed when shared and posted on social media.
 
 ![Screenshot 06](screenshots/open-graph.png "The Shoppies Shared on Social Media")
+
+[Back To Top](#Table-of-Contents)
+
+## E2E Testing
+I used Cypress for end-to-end testing to ensure that the application's complete workflow functions properly. All of the features of the application's workflow were tested, such as searching for movies and nominating movies, testing that local storage works by reloading the page, checking that the displayed Movies Nominated count matches the number of movies actually nominated, etc.
+
+In addition, I created a workflow using GitHub Actions to automate the testing so that the application always works as expected, which includes sending out notifications if any of the tests fail. I used both the `push` and `schedule` events. The `push` event is used so that the tests are run whenever any updates to the code are pushed to the respository to help ensure that nothing breaks unintentionally due to code changes. With the `schedule` event, the tests have been scheduled to run automatically once a week, also to help ensure that the application is always working as expected.
+
+https://user-images.githubusercontent.com/36783010/157738620-ac14f70d-4653-4f33-a8eb-33b8466e042a.mp4
 
 [Back To Top](#Table-of-Contents)
 
