@@ -1,4 +1,4 @@
-# The Shoppies 
+# The Shoppies [![End-to-end tests](https://github.com/answebdev/shoppies/actions/workflows/cy.yaml/badge.svg?branch=main)](https://github.com/answebdev/shoppies/actions/workflows/cy.yaml)
 
 ![Screenshot 01](screenshots/the-shoppies-demo.gif "The Shoppies Demo")
 
