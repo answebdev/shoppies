@@ -97,21 +97,21 @@ describe('Application Test Suite', () => {
     cy.get('[data-testid=movie-count]').should('have.text', '4');
   });
 
-  it('searches for and nominates Harry Potter movie', () => {
+  it('searches for and nominates The Hobbit movie', () => {
     cy.log('Clearing input before searching for new movie');
     cy.get('[data-testid=input]').clear();
 
-    cy.get('[data-testid=input]').type('Harry Potter');
+    cy.get('[data-testid=input]').type('The Hobbit');
 
     cy.log(
-      'Checking that results contain "Harry Potter and the Prisoner of Azkaban • 2004"'
+      'Checking that results contain "The Hobbit • 1977"'
     );
     cy.get('[data-testid=movie-title-and-year]')
       .eq(3)
-      .should('contain', 'Harry Potter and the Prisoner of Azkaban • 2004');
+      .should('contain', 'The Hobbit • 1977');
 
     cy.log(
-      'Nominates Harry Potter and the Prisoner of Azkaban after clicking Nominate button'
+      'Nominates The Hobbit after clicking Nominate button'
     );
     cy.get('[data-testid=nominate-btn]').eq(3).click();
 
