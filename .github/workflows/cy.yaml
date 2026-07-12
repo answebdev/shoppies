@@ -13,14 +13,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 1. Force the runner to use an older, compatible Node version
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      # 2. Add the fallback flag so the action allows the deprecated Node version
       - name: Cypress run
         uses: cypress-io/github-action@v6
-        env:
-          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
