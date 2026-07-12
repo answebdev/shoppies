@@ -1,6 +1,124 @@
 /// <reference types="cypress" />
 
 describe('Application Test Suite', () => {
+  beforeEach(() => {
+    // Intercept OMDB API requests and inject mock data so external updates don't break our tests
+    cy.intercept('GET', '**/omdbapi.com/**', (req) => {
+      const searchParam = req.query.s ? req.query.s.toLowerCase() : '';
+
+      if (searchParam.includes('toy story')) {
+        req.reply({
+          Search: [
+            {
+              Title: 'Toy Story',
+              Year: '1995',
+              imdbID: 'tt0114709',
+              Type: 'movie',
+            },
+            {
+              Title: 'Toy Story 2',
+              Year: '1999',
+              imdbID: 'tt0120363',
+              Type: 'movie',
+            },
+            {
+              Title: 'Toy Story 3',
+              Year: '2010',
+              imdbID: 'tt0435761',
+              Type: 'movie',
+            },
+            {
+              Title: 'Toy Story 4',
+              Year: '2019',
+              imdbID: 'tt1979376',
+              Type: 'movie',
+            },
+            {
+              Title: 'Toy Story of Terror',
+              Year: '2013',
+              imdbID: 'tt3067950',
+              Type: 'movie',
+            },
+          ],
+          Response: 'True',
+        });
+      } else if (searchParam.includes('jaws')) {
+        req.reply({
+          Search: [
+            { Title: 'Jaws', Year: '1975', imdbID: 'tt0073195', Type: 'movie' },
+            {
+              Title: 'Jaws 2',
+              Year: '1978',
+              imdbID: 'tt0077766',
+              Type: 'movie',
+            },
+          ],
+          Response: 'True',
+        });
+      } else if (searchParam.includes('batman')) {
+        req.reply({
+          Search: [
+            {
+              Title: 'Batman Begins',
+              Year: '2005',
+              imdbID: 'tt0372784',
+              Type: 'movie',
+            },
+          ],
+          Response: 'True',
+        });
+      } else if (searchParam.includes('the hobbit')) {
+        req.reply({
+          Search: [
+            {
+              Title: 'The Hobbit: An Unexpected Journey',
+              Year: '2012',
+              imdbID: 'tt0090155',
+              Type: 'movie',
+            },
+            {
+              Title: 'The Hobbit: The Desolation of Smaug',
+              Year: '2013',
+              imdbID: 'tt1170358',
+              Type: 'movie',
+            },
+            {
+              Title: 'The Hobbit: The Battle of the Five Armies',
+              Year: '2014',
+              imdbID: 'tt2310332',
+              Type: 'movie',
+            },
+            {
+              Title: 'The Hobbit',
+              Year: '1977',
+              imdbID: 'tt0076142',
+              Type: 'movie',
+            },
+          ],
+          Response: 'True',
+        });
+      } else if (searchParam.includes('spiderman')) {
+        req.reply({
+          Search: [
+            {
+              Title: 'Spider-Man',
+              Year: '2002',
+              imdbID: 'tt0145487',
+              Type: 'movie',
+            },
+            {
+              Title: 'Superman, Spiderman or Batman',
+              Year: '2011',
+              imdbID: 'tt2084944',
+              Type: 'movie',
+            },
+          ],
+          Response: 'True',
+        });
+      }
+    }).as('omdbSearch');
+  });
+
   it('visits the main page of the application', () => {
     cy.visit('/');
     cy.url().should('include', '/');
@@ -16,6 +134,7 @@ describe('Application Test Suite', () => {
 
   it('searches for and nominates Toy Story movies', () => {
     cy.get('[data-testid=input]').type('Toy Story');
+    cy.wait('@omdbSearch');
 
     cy.log('Checking that results contain "Toy Story • 1995"');
     cy.get('[data-testid=movie-title-and-year]')
@@ -48,6 +167,7 @@ describe('Application Test Suite', () => {
     cy.get('[data-testid=input]').clear();
 
     cy.get('[data-testid=input]').type('Jaws');
+    cy.wait('@omdbSearch');
 
     cy.log('Checking that results contain "Jaws 2 • 1978"');
     cy.get('[data-testid=movie-title-and-year]')
@@ -80,6 +200,7 @@ describe('Application Test Suite', () => {
     cy.get('[data-testid=input]').clear();
 
     cy.get('[data-testid=input]').type('Batman');
+    cy.wait('@omdbSearch');
 
     cy.log('Checking that results contain "Batman Begins • 2005"');
     cy.get('[data-testid=movie-title-and-year]')
@@ -90,7 +211,6 @@ describe('Application Test Suite', () => {
     cy.get('[data-testid=nominate-btn]').eq(0).click();
 
     cy.log('Checking that there are four nominated movies');
-
     cy.get('[data-testid=nominated-movies]').should('have.length', '4');
 
     cy.log('Movies Nominated count should be 4');
@@ -102,17 +222,14 @@ describe('Application Test Suite', () => {
     cy.get('[data-testid=input]').clear();
 
     cy.get('[data-testid=input]').type('The Hobbit');
+    cy.wait('@omdbSearch');
 
-    cy.log(
-      'Checking that results contain "The Hobbit • 1977"'
-    );
+    cy.log('Checking that results contain "The Hobbit • 1977"');
     cy.get('[data-testid=movie-title-and-year]')
       .eq(3)
       .should('contain', 'The Hobbit • 1977');
 
-    cy.log(
-      'Nominates The Hobbit after clicking Nominate button'
-    );
+    cy.log('Nominates The Hobbit after clicking Nominate button');
     cy.get('[data-testid=nominate-btn]').eq(3).click();
 
     cy.log('Checking that there are five nominated movies');
@@ -139,9 +256,10 @@ describe('Application Test Suite', () => {
     cy.get('[data-testid=input]').clear();
 
     cy.get('[data-testid=input]').type('Spiderman');
+    cy.wait('@omdbSearch');
 
     cy.log(
-      'Checking that results contain "Superman, Spiderman or Batman • 2011"'
+      'Checking that results contain "Superman, Spiderman or Batman • 2011"',
     );
     cy.get('[data-testid=movie-title-and-year]')
       .eq(1)
