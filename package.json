@@ -39,5 +39,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "allowScripts": {
+    "core-js@3.50.0": true,
+    "core-js-pure@3.50.0": true,
+    "cypress@9.7.0": true
   }
 }
