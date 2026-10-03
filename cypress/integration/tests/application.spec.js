@@ -19,7 +19,7 @@ describe('Application Test Suite', () => {
       },
     }).as('getToyStory');
 
-    cy.intercep('GET', '**/www.omdbapi.com/?s=Jaws*&apikey=*', {
+    cy.intercept('GET', '**/www.omdbapi.com/?s=Jaws*&apikey=*', {
       statusCode: 200,
       body: {
         Search: [
