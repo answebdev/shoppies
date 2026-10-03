@@ -4,7 +4,7 @@ describe('Application Test Suite', () => {
   beforeEach(() => {
     // Intercept search requests and provide predictable mock data
     // for more reliable tests to account for changes in API over time
-    cy.intercep('GET', '**/www.omdbapi.com/?s=Toy*&apikey=*', {
+    cy.intercept('GET', '**/www.omdbapi.com/?s=Toy*&apikey=*', {
       statusCode: 200,
       body: {
         Search: [
